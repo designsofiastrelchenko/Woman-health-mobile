@@ -1,0 +1,22 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 16px 20px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+  background: var(--color-primary-soft);
+  transition: background 0.2s ease, width 0.2s ease;
+}
+
+.dotActive {
+  width: 30px;
+  height: 8px;
+  border-radius: 100px;
+  background: var(--color-primary);
+}
