@@ -1,0 +1,50 @@
+/* Figma IOS / Status bar — pixel match (125:230 / 78:286 variants). */
+
+.bar {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 375px;
+  height: 44px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.right {
+  position: absolute;
+  top: 17.33px;
+  right: 14.34px;
+  width: 66.661px;
+  height: 11.336px;
+}
+
+.rightImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.clock {
+  position: absolute;
+  left: 21px;
+  top: 7px;
+  width: 54px;
+  height: 21px;
+}
+
+.clockText {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(50% - 3.5px);
+  margin: 0;
+  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  text-align: center;
+  color: #1d2a44;
+}

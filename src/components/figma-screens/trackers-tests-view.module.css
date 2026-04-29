@@ -1,0 +1,162 @@
+/* Figma 170:13454 — Trackers / Tests (375×812). */
+
+.root {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.status {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 375px;
+  height: 44px;
+  z-index: 3;
+}
+
+.header {
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  transform: translateX(-50%);
+  width: 343px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.headerGhost {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.list {
+  position: absolute;
+  left: 0;
+  top: 106px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  position: absolute;
+  left: 16px;
+  width: 343px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  min-height: 94px;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.card1 {
+  top: 0;
+}
+
+.card2 {
+  top: 110px;
+}
+
+.card3 {
+  top: 220px;
+}
+
+.cardInner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 0;
+}
+
+.textCol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  width: 217px;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #1a1a1a;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.desc {
+  margin: 0;
+  width: 217px;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.2px;
+  color: #6a6a6a;
+}
+
+.metaRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.meta {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #a3a7b3;
+  white-space: nowrap;
+}
+
+.metaDot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #a3a7b3;
+  flex-shrink: 0;
+}
+
+.chevron {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

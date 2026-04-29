@@ -1,0 +1,151 @@
+/* Figma 170:14188 — Trackers / Checklists (375×812). */
+
+.root {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.status {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 375px;
+  height: 44px;
+  z-index: 3;
+}
+
+.header {
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  transform: translateX(-50%);
+  width: 343px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.headerGhost {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.card {
+  position: absolute;
+  left: 16px;
+  width: 343px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card1 {
+  top: 106px;
+  min-height: 94px;
+}
+
+.card2 {
+  top: 216px;
+  min-height: 94px;
+}
+
+.card3 {
+  top: 326px;
+  min-height: 82px;
+}
+
+.card4 {
+  top: 424px;
+  min-height: 94px;
+}
+
+.card5 {
+  top: 534px;
+  min-height: 94px;
+}
+
+.cardInner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 0;
+}
+
+.textCol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #1a1a1a;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.desc {
+  margin: 0;
+  width: 217px;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #6a6a6a;
+  white-space: pre-wrap;
+}
+
+.meta {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #a3a7b3;
+  white-space: nowrap;
+}
+
+.chevron {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

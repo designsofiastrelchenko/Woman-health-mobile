@@ -1,0 +1,148 @@
+/* Figma 192:4024 — Input code + keyboard (375×812). */
+
+.root {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.status {
+  z-index: 2;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  top: 168px;
+  width: 331px;
+  transform: translateX(-50%);
+  margin: 0;
+  text-align: center;
+}
+
+.sub {
+  position: absolute;
+  left: 16px;
+  top: 224px;
+  width: 343px;
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.14px;
+  color: #6a6a6a;
+}
+
+.subStrong {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.codeRow {
+  position: absolute;
+  left: 16px;
+  top: 265px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.cell {
+  box-sizing: border-box;
+  height: 67px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.cellFilled {
+  border: 1px solid #1a1a1a;
+  background: #fff;
+}
+
+.cellEmpty {
+  border: 1px solid #d9d9d9;
+  background: #fff;
+}
+
+.c74 {
+  width: 74px;
+}
+
+.c73 {
+  width: 73px;
+}
+
+.digit {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.24px;
+  text-align: center;
+  color: #000;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  top: 356px;
+  width: 343px;
+  height: 56px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 12px;
+  background: #4979fb;
+  cursor: default;
+}
+
+.btnText {
+  margin: 0;
+  color: #fff;
+}
+
+.resend {
+  position: absolute;
+  left: calc(50% + 1px);
+  top: 457px;
+  transform: translate(-50%, -100%);
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.resendLight {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.resendMed {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.keyboard {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 375px;
+}

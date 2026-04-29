@@ -1,0 +1,9 @@
+.shell {
+  width: 100%;
+  max-width: 375px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: var(--ds-surface);
+  display: flex;
+  flex-direction: column;
+}

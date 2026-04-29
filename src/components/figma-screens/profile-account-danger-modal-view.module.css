@@ -1,0 +1,244 @@
+/* Figma 92:24979 — delete account; 92:25269 — log out (375×812 viewport, scroll + fixed nav). */
+
+.viewport {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.scroll {
+  height: 728px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scrollInner {
+  position: relative;
+  min-height: 1668px;
+}
+
+.navSlot {
+  position: absolute;
+  left: 16px;
+  top: 728px;
+  width: 343px;
+  z-index: 4;
+  box-sizing: border-box;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: #1a1a1a;
+  opacity: 0.8;
+  pointer-events: auto;
+}
+
+/* Figma 92:25254 — delete dialog */
+.dialogDelete {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  width: 343px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 32px;
+  border-radius: 16px;
+  background: #fff;
+  pointer-events: auto;
+}
+
+.deleteTextBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.deleteTitles {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.deleteTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #1a1a1a;
+}
+
+.deleteHint {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.14px;
+  color: #6a6a6a;
+  white-space: pre-wrap;
+}
+
+.deleteInput {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 1px solid #dde5e9;
+  background: #fff;
+}
+
+.deleteInputText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #c7c9d9;
+}
+
+.btnDeleteSubmit {
+  display: flex;
+  width: 279px;
+  height: 56px;
+  padding: 16px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 12px;
+  background: #4979fb;
+  cursor: pointer;
+}
+
+.btnDeleteSubmitText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #fff;
+}
+
+/* Figma 92:25559 — logout dialog */
+.dialogLogout {
+  position: absolute;
+  left: calc(50% + 0.5px);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  width: 320px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #fff;
+  pointer-events: auto;
+}
+
+.logoutTitleBlock {
+  width: 100%;
+  text-align: center;
+}
+
+.logoutTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #1a1a1a;
+}
+
+.logoutSub {
+  margin: 8px 0 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.14px;
+  color: #6a6a6a;
+}
+
+.logoutActions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 288px;
+}
+
+.btnLogoutOutline {
+  display: flex;
+  width: 140px;
+  height: 50px;
+  padding: 16px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1.5px solid #4979fb;
+  background: #fff;
+  cursor: pointer;
+}
+
+.btnLogoutPrimary {
+  display: flex;
+  width: 140px;
+  height: 50px;
+  padding: 16px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: none;
+  background: #4979fb;
+  cursor: pointer;
+}
+
+.btnLogoutOutlineText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #1a1a1a;
+}
+
+.btnLogoutPrimaryText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #fff;
+}

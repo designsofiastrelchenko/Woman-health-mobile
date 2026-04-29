@@ -1,0 +1,516 @@
+/* Figma 140:10199 — News Feed (375×812). */
+
+.root {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.status {
+  z-index: 3;
+}
+
+.nav {
+  position: absolute;
+  left: 16px;
+  top: 728px;
+  width: 343px;
+  z-index: 4;
+  box-sizing: border-box;
+}
+
+/* --- Header 142:13416 --- */
+.head {
+  position: absolute;
+  left: 16px;
+  top: 60px;
+  width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.headRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.headTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.headSettings {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.headSub {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #6a6a6a;
+}
+
+/* --- Card shell (375×342 video, 375×237 text, 375×370 carousel) --- */
+.card {
+  position: absolute;
+  left: 0;
+  width: 375px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.cardVideo {
+  top: 118px;
+  height: 342px;
+}
+
+.cardText {
+  top: 460px;
+  height: 237px;
+}
+
+.cardCarousel {
+  top: 697px;
+  height: 370px;
+}
+
+/* Author row — shared */
+.authorRow {
+  position: absolute;
+  left: 16px;
+  width: 343px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  top: 12px;
+}
+
+.avatar {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  overflow: hidden;
+  border: 0.5px solid rgba(90, 91, 97, 0.2);
+  box-sizing: border-box;
+}
+
+.avatarImg {
+  position: absolute;
+  left: 0;
+  top: -8.14%;
+  width: 100%;
+  height: 150%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.authorMeta {
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: 40px;
+  justify-content: flex-start;
+}
+
+.nameRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+
+.authorName {
+  margin: 0;
+  width: 125px;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.16px;
+  color: #1a1a1a;
+}
+
+.timeWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 4.42px;
+  flex-shrink: 0;
+}
+
+.timeDot {
+  width: 4px;
+  height: 4.42px;
+  border-radius: 100px;
+  background: #6a6a6a;
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+
+.timeText {
+  margin: 0 0 0 8px;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #6a6a6a;
+  width: 59px;
+}
+
+.rolePill {
+  margin-top: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 0;
+  border-radius: 4px;
+}
+
+.roleText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #6a6a6a;
+  white-space: nowrap;
+}
+
+/* Video card */
+.videoTitle {
+  position: absolute;
+  left: 16px;
+  top: 64px;
+  width: 343px;
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #1a1a1a;
+}
+
+.videoWrap {
+  position: absolute;
+  left: 16px;
+  top: 96px;
+  width: 343px;
+  height: 192px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 2.5px rgba(0, 0, 0, 0.05);
+}
+
+.videoThumb {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 343px;
+  height: 192px;
+}
+
+.videoThumb img {
+  position: absolute;
+  left: 0;
+  top: -9.42%;
+  width: 100%;
+  height: 118.85%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.videoDim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.videoDimOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.videoDimImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeBadge {
+  position: absolute;
+  left: 300px;
+  top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 4px;
+  border-radius: 9px;
+  background: rgba(0, 3, 15, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.timeBadgeText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+}
+
+.playBtn {
+  position: absolute;
+  left: calc(50% + 0.5px);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.playBtnInner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.muteBtn {
+  position: absolute;
+  left: 5px;
+  top: 164px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 100px;
+  background: rgba(0, 3, 15, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: none;
+  cursor: pointer;
+}
+
+.muteBtn img {
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+
+.maxBtn {
+  position: absolute;
+  left: 332px;
+  top: 262px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 24px;
+  background: rgba(0, 3, 15, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: none;
+  cursor: pointer;
+}
+
+.maxBtn img {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+/* Footer actions row */
+.actionsRow {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  width: 343px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+  box-sizing: border-box;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+}
+
+.statPair {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.statPairSecond {
+  margin-left: 63px;
+}
+
+.statIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.statIcon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.statText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.24px;
+  color: #6a6a6a;
+}
+
+.moreIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.moreIcon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Text card */
+.textBody {
+  position: absolute;
+  left: 16px;
+  top: 64px;
+  width: 343px;
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #1a1a1a;
+  white-space: pre-wrap;
+}
+
+.readMore {
+  position: absolute;
+  left: 16px;
+  top: 166px;
+  width: 343px;
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.14px;
+  color: #1a1a1a;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.carouselImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Carousel card */
+.carouselTitle {
+  position: absolute;
+  left: 16px;
+  top: 64px;
+  width: 343px;
+  margin: 0;
+  font-family: "SF Pro Display", var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1a1a1a;
+}
+
+.carouselStrip {
+  position: absolute;
+  left: 16px;
+  top: 116px;
+  width: 359px;
+  height: 200px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  scrollbar-width: none;
+}
+
+.carouselStrip::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselTile {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 2.5px rgba(0, 0, 0, 0.05);
+}
+
+.carouselTileInner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}

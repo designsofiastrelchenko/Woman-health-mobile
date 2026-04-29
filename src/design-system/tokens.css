@@ -1,0 +1,51 @@
+/* Design tokens — sourced from Figma components (Button, Navigation Bar, Input Field). */
+
+:root {
+  /* Surfaces */
+  --ds-surface: #ffffff;
+  --ds-grey-50: #fafafa;
+
+  /* Text */
+  --ds-text-primary: #1a1a1a;
+  --ds-text-muted: #6a6a6a;
+  --ds-text-label: #404040;
+  --ds-text-placeholder: #c7c9d9;
+  --ds-text-hint: #818898;
+  --ds-text-white: #ffffff;
+
+  /* Brand */
+  --ds-primary: #4979fb;
+  /** Figma Primary/300 — main CTA on auth register/login screens */
+  --ds-primary-mid: #92affd;
+  --ds-primary-soft: #b6c9fd;
+  --ds-grey-300: #d4dbea;
+
+  /* Borders & lines */
+  --ds-border-nav: 1px solid var(--ds-grey-50);
+  --ds-border-field: 1px solid #dde5e9;
+  --ds-border-secondary-btn: 1.5px solid var(--ds-primary);
+
+  /* Radius */
+  --ds-radius-button: 12px;
+  --ds-radius-nav: 24px;
+  --ds-radius-field: 8px;
+
+  /* Elevation */
+  --ds-shadow-nav: 2px 4px 7.5px rgba(0, 0, 0, 0.04);
+
+  /* Layout */
+  --ds-nav-height: 60px;
+  --ds-button-height-lg: 56px;
+  --ds-field-height: 50px;
+
+  /* Status bar (iOS mock) */
+  --ds-clay-blue: #1d2a44;
+
+  /* Legacy aliases — use --ds-* in new code */
+  --color-surface: var(--ds-surface);
+  --color-text: var(--ds-text-primary);
+  --color-text-muted: var(--ds-text-muted);
+  --color-primary: var(--ds-primary);
+  --color-primary-soft: var(--ds-primary-soft);
+  --color-clay-blue: var(--ds-clay-blue);
+}

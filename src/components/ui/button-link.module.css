@@ -1,0 +1,43 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 343px;
+  min-height: var(--ds-button-height-lg);
+  padding: 0 16px;
+  border-radius: var(--ds-radius-button);
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.primary {
+  background: var(--ds-primary);
+  color: var(--ds-text-white);
+}
+
+.secondary {
+  background: var(--ds-surface);
+  color: var(--ds-text-primary);
+  border: var(--ds-border-secondary-btn);
+}
+
+.tertiary {
+  background: transparent;
+  color: var(--ds-primary);
+}
+
+.label {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+}
+
+.root:focus-visible {
+  outline: 2px solid var(--ds-primary-soft);
+  outline-offset: 2px;
+}

@@ -1,0 +1,590 @@
+/* Figma node 91:20934 — Profile Page / Profile (375×1603).
+   Figma 92:24979 / 92:25269 — extended chrome behind modals (375×1668+). */
+
+.page {
+  position: relative;
+  width: 375px;
+  min-height: 1603px;
+  margin: 0 auto;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.page[data-layout="deleteModalChrome"] {
+  min-height: 1668px;
+}
+
+.page[data-layout="deleteModalChrome"] .sectionNotify {
+  top: 698px;
+}
+
+.page[data-layout="deleteModalChrome"] .sectionApp {
+  top: 912px;
+}
+
+.page[data-layout="deleteModalChrome"] .sectionSupport {
+  top: 1120px;
+}
+
+.page[data-layout="deleteModalChrome"] .sectionAbout {
+  top: 1322px;
+}
+
+.page[data-layout="deleteModalChrome"] .logoutCard {
+  top: 1580px;
+}
+
+.page[data-layout="deleteModalChrome"] .nav {
+  display: none;
+}
+
+.status {
+  z-index: 3;
+}
+
+.avatarWrap {
+  position: absolute;
+  left: calc(50% + 0.5px);
+  top: 119px;
+  width: 120px;
+  height: 120px;
+  transform: translateX(-50%);
+  border-radius: 100px;
+}
+
+.avatarLayers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.avatarBase {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.avatarOverlay {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 100px;
+}
+
+.avatarOverlayImg {
+  position: absolute;
+  left: 0;
+  top: -6.8%;
+  width: 100%;
+  height: 150.47%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.editBadge {
+  position: absolute;
+  left: 44px;
+  top: 96px;
+  display: flex;
+  align-items: flex-start;
+  padding: 8px;
+  border-radius: 100px;
+  border: 1px solid #fff;
+  background: #4979fb;
+  box-sizing: border-box;
+}
+
+.editBadgeInner {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.vecAbs {
+  position: absolute;
+  display: block;
+}
+
+.vecImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+}
+
+.head {
+  position: absolute;
+  left: 16px;
+  top: 60px;
+  width: 343px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headFlip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.headFlipInner {
+  transform: rotate(180deg) scaleY(-1);
+}
+
+.headTitle {
+  margin: 0;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.headGhostSlot {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.nameBlock {
+  position: absolute;
+  left: 115px;
+  top: 255px;
+  width: 146px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.nameTitle {
+  margin: 0;
+}
+
+.nameEmail {
+  margin: 0;
+}
+
+.statusRow {
+  position: absolute;
+  left: 16px;
+  top: 327px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+}
+
+.pill108 {
+  width: 108px;
+}
+
+.pill110 {
+  width: 110px;
+}
+
+.pill109 {
+  width: 109px;
+}
+
+.pillIconBg {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px;
+  border-radius: 100px;
+  flex-shrink: 0;
+}
+
+.pillIconBgStar {
+  background: #fff2de;
+}
+
+.pillIconBgFire {
+  background: #ffeee9;
+}
+
+.pillIconBgCheck {
+  background: #edf2ff;
+}
+
+.pillIcon16 {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.pillIcon16 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.checkInset {
+  position: absolute;
+  inset: -4.69%;
+}
+
+.pillTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.pillLine1 {
+  margin: 0;
+}
+
+.pillLine2 {
+  margin: 0;
+}
+
+.section {
+  position: absolute;
+  left: 16px;
+  width: 343px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.sectionAccount {
+  top: 440px;
+}
+
+.sectionNotify {
+  top: 634px;
+}
+
+.sectionApp {
+  top: 848px;
+}
+
+.sectionSupport {
+  top: 994px;
+}
+
+.sectionAbout {
+  top: 1196px;
+}
+
+.sectionTitle {
+  margin: 0;
+  color: #000;
+}
+
+.rowLabelFigma {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.14px;
+  color: #1a1a1a;
+}
+
+.card {
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.cardNoGap32 {
+  gap: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rowTight {
+  min-height: 30px;
+}
+
+.rowLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.rowLabel {
+  margin: 0;
+}
+
+.icon24 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.icon24 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.masked24 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.maskedInner {
+  position: absolute;
+  pointer-events: none;
+}
+
+.maskedFill {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+/* iconsax-card */
+.maskCard {
+  inset: 11.46% 5.21%;
+  mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  mask-repeat: no-repeat;
+  mask-size: 24px 24px;
+  mask-position: -1.25px -2.75px;
+  -webkit-mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 24px 24px;
+  -webkit-mask-position: -1.25px -2.75px;
+}
+
+/* iconsax-calendar */
+.maskCal {
+  inset: 5.21% 9.38%;
+  mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  mask-repeat: no-repeat;
+  mask-size: 24px 24px;
+  mask-position: -2.25px -1.25px;
+  -webkit-mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 24px 24px;
+  -webkit-mask-position: -2.25px -1.25px;
+}
+
+/* iconsax-global */
+.maskGlobe {
+  inset: 5.21%;
+  mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  mask-repeat: no-repeat;
+  mask-size: 24px 24px;
+  mask-position: -1.25px -1.25px;
+  -webkit-mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 24px 24px;
+  -webkit-mask-position: -1.25px -1.25px;
+}
+
+/* iconsax-info */
+.maskInfo {
+  inset: 5.21%;
+  mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  mask-repeat: no-repeat;
+  mask-size: 24px 24px;
+  mask-position: -1.25px -1.25px;
+  -webkit-mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 24px 24px;
+  -webkit-mask-position: -1.25px -1.25px;
+}
+
+/* iconsax-lifebuoy */
+.maskLife {
+  inset: 5.21% 5.33% 5.21% 5.08%;
+  mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  mask-repeat: no-repeat;
+  mask-size: 24px 24px;
+  mask-position: -1.22px -1.25px;
+  -webkit-mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 24px 24px;
+  -webkit-mask-position: -1.22px -1.25px;
+}
+
+/* iconsax-security */
+.maskSec {
+  inset: 5.16% 9.75% 5.21% 9.75%;
+  mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  mask-repeat: no-repeat;
+  mask-size: 24px 24px;
+  mask-position: -2.34px -1.238px;
+  -webkit-mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 24px 24px;
+  -webkit-mask-position: -2.34px -1.238px;
+}
+
+/* iconsax-bag — Figma delete-account chrome */
+.maskBag {
+  inset: 5.19% 10.41% 5.21% 10.4%;
+  mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  mask-repeat: no-repeat;
+  mask-size: 24px 24px;
+  mask-position: -2.496px -1.246px;
+  -webkit-mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 24px 24px;
+  -webkit-mask-position: -2.496px -1.246px;
+}
+
+/* iconsax-finger-circle */
+.maskFinger {
+  inset: 5.21%;
+  mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  mask-repeat: no-repeat;
+  mask-size: 24px 24px;
+  mask-position: -1.25px -1.25px;
+  -webkit-mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 24px 24px;
+  -webkit-mask-position: -1.25px -1.25px;
+}
+
+/* iconsax-padlock */
+.maskPadlock {
+  inset: 5.21%;
+  mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  mask-repeat: no-repeat;
+  mask-size: 24px 24px;
+  mask-position: -1.25px -1.25px;
+  -webkit-mask-image: url("/icons/figma/96310348c445c45fc1af346852679c9efab4e455.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 24px 24px;
+  -webkit-mask-position: -1.25px -1.25px;
+}
+
+.switchWrap {
+  width: 50px;
+  height: 30px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.switchInner {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.switchInner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.versionText {
+  margin: 0;
+}
+
+.logoutCard {
+  position: absolute;
+  left: 16px;
+  top: 1398px;
+  width: 343px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  padding: 32px 24px;
+}
+
+.logoutLabel {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.14px;
+  color: #f04438;
+}
+
+.nav {
+  position: absolute;
+  left: 16px;
+  top: 1519px;
+  width: 343px;
+  box-sizing: border-box;
+}
+
+.rowLink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.chevron {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.chevronInner {
+  position: absolute;
+  bottom: 25%;
+  left: 37.5%;
+  right: 37.5%;
+  top: 25%;
+}
+
+.chevronInner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

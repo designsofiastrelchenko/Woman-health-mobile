@@ -1,0 +1,527 @@
+/* Figma 169:13032 — Trackers / Baby's due date calculator / Step 2 (375×891). */
+
+.root {
+  position: relative;
+  width: 375px;
+  min-height: 891px;
+  margin: 0 auto;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.status {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 375px;
+  height: 44px;
+  z-index: 3;
+}
+
+.header {
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  transform: translateX(-50%);
+  width: 343px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.headerGhost {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.heroBanner {
+  position: absolute;
+  left: 16px;
+  top: 106px;
+  width: 343px;
+  height: 96px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 10px 0 rgba(73, 121, 251, 0.02);
+}
+
+.wave1 {
+  position: absolute;
+  left: 50%;
+  top: 11.8px;
+  transform: translateX(-50%);
+  width: 347px;
+  height: 36.949px;
+}
+
+.wave1 img,
+.wave2 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.wave2 {
+  position: absolute;
+  left: 50%;
+  top: 76px;
+  transform: translateX(calc(-50% - 0.5px));
+  width: 342px;
+  height: 31.653px;
+}
+
+.heroContent {
+  position: absolute;
+  left: 24px;
+  top: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.heroCaption {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #6a6a6a;
+  white-space: nowrap;
+}
+
+.heroDate {
+  margin: 0;
+  width: 218px;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.16px;
+  color: #1a1a1a;
+}
+
+.heroSub {
+  margin: 0;
+  width: 235px;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #6a6a6a;
+}
+
+.statGrid {
+  position: absolute;
+  left: 16px;
+  top: 224px;
+  width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.statRow {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.statCard {
+  flex: 1 0 0;
+  min-width: 0;
+  height: 67px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.statLabelBig {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.24px;
+  color: #1a1a1a;
+}
+
+.statSuffix {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.14px;
+  color: #6a6a6a;
+}
+
+.statValueRow {
+  position: absolute;
+  left: 50%;
+  top: 11px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.statCaption {
+  position: absolute;
+  left: 50%;
+  top: 42px;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #98a2b3;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.progressCard {
+  position: absolute;
+  left: 16px;
+  top: 392px;
+  width: 343px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  overflow: hidden;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.progressTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #1a1a1a;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.progressInner {
+  display: flex;
+  flex-direction: column;
+  width: 316px;
+  height: 34px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.barRow {
+  display: flex;
+  flex-direction: row;
+  gap: 2.99px;
+  align-items: flex-start;
+  width: 316.563px;
+}
+
+.barSeg {
+  height: 5.991px;
+  flex-shrink: 0;
+}
+
+.barSeg1 {
+  width: 100.943px;
+  border-radius: 99px 0 0 99px;
+  background: #2c4ca2;
+}
+
+.barSeg2 {
+  width: 100.943px;
+  background: #6d94fc;
+}
+
+.barSeg3 {
+  width: 108.709px;
+  border-radius: 0 99px 99px 0;
+  background: #dbe4fe;
+}
+
+.triRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 316px;
+}
+
+.triCol {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.triCol1 {
+  width: 100.943px;
+  color: #6a6a6a;
+}
+
+.triCol1 p {
+  margin: 0;
+  font-weight: 400;
+}
+
+.triCol2 {
+  width: 100.943px;
+  color: #1a1a1a;
+}
+
+.triCol2 p:first-child {
+  margin: 0;
+  font-weight: 500;
+}
+
+.triCol2 p:last-child {
+  margin: 0;
+  font-weight: 400;
+}
+
+.triCol3 {
+  width: 108.709px;
+  color: #6a6a6a;
+}
+
+.triCol3 p {
+  margin: 0;
+  font-weight: 400;
+}
+
+.keyBlock {
+  width: 311px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.keyTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #1a1a1a;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.keyRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.keyRowMuted .keyLeft {
+  margin: 0;
+  font-weight: 400;
+  color: #6a6a6a;
+}
+
+.keyRowMuted .keyRight {
+  margin: 0;
+  font-weight: 500;
+  color: #6a6a6a;
+}
+
+.keyRowDark .keyLeft {
+  margin: 0;
+  font-weight: 400;
+  color: #6a6a6a;
+}
+
+.keyRowDark .keyRight {
+  margin: 0;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.negelBanner {
+  position: absolute;
+  left: 16px;
+  top: 600px;
+  width: 343px;
+  height: 98px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fffaeb;
+}
+
+.negelInner {
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  width: 311px;
+}
+
+.negelBubble {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  padding: 6px;
+  border-radius: 100px;
+  background: #fdb022;
+}
+
+.negelBubbleInner {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.negelTextCol {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.negelTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.16px;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.negelBody {
+  margin: 0;
+  max-width: 271px;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #6a6a6a;
+  opacity: 0.9;
+  white-space: normal;
+}
+
+.footer {
+  position: absolute;
+  left: 16px;
+  top: 739px;
+  width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.btnPrimary {
+  box-sizing: border-box;
+  display: flex;
+  width: 343px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 12px;
+  background: #4979fb;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btnPrimaryText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btnGhost {
+  box-sizing: border-box;
+  display: flex;
+  width: 343px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 12px;
+  background: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btnGhostText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #4979fb;
+  text-align: center;
+  white-space: nowrap;
+}

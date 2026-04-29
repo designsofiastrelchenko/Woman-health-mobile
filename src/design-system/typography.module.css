@@ -1,0 +1,123 @@
+/* Text styles — names mirror Figma text styles (Group 3 + component copy). */
+
+.heading3 {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: 0.18px;
+  color: var(--ds-text-primary);
+}
+
+.paragraph2 {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.35;
+  letter-spacing: 0.14px;
+  color: var(--ds-text-muted);
+}
+
+/* Paragraph/3 — Figma 12 Regular. */
+.paragraph3 {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.24px;
+  color: var(--ds-text-muted);
+}
+
+/* Heading/4 — Figma 16 Medium. */
+.heading4 {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.16px;
+  color: var(--ds-text-primary);
+}
+
+/* Heading/6 — Figma 12 Medium (pill titles). */
+.heading6 {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: var(--ds-text-primary);
+}
+
+/* Heading/5 — used on Primary / Secondary / Tertiary buttons (14 Medium). */
+.heading5 {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+}
+
+/* Subhead/3 — input label */
+.subhead3 {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: var(--ds-text-label);
+}
+
+/* Nav tab label (Figma: Stolzl Book 10px — approximated with 400). */
+.navLabel {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: var(--ds-text-muted);
+}
+
+.navLabelActive {
+  font-weight: 500;
+  color: var(--ds-primary);
+}
+
+/* Placeholder in field */
+.fieldPlaceholder {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: var(--ds-text-placeholder);
+}
+
+/* Caption/3 — hint under field */
+.caption3 {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: var(--ds-text-hint);
+}
+
+.heading2 {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0.24px;
+  color: var(--ds-text-primary);
+}
+
+/* Heading/1 — Figma (e.g. email code screens). */
+.heading1 {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.3px;
+  color: var(--ds-text-primary);
+}

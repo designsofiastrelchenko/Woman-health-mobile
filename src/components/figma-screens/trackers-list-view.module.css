@@ -1,0 +1,180 @@
+/* Figma 136:9517 — Trackers (375×812). */
+
+.root {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.status {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 375px;
+  height: 44px;
+  z-index: 3;
+}
+
+.head {
+  position: absolute;
+  left: 16px;
+  top: 60px;
+  width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.headTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #1a1a1a;
+}
+
+.headSub {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #6a6a6a;
+}
+
+.table {
+  position: absolute;
+  left: 16px;
+  top: 118px;
+  width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  gap: 12px;
+}
+
+.rowInner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  flex: 1;
+}
+
+.iconBubble {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px;
+  border-radius: 100px;
+  flex-shrink: 0;
+}
+
+.iconBubbleViolet {
+  background: #f0edfe;
+}
+
+.iconBubbleWarm {
+  background: #fff8ee;
+}
+
+.iconBubbleBlue {
+  background: #edf2ff;
+}
+
+.iconBubbleCoral {
+  background: #ffeee9;
+}
+
+.iconBubbleGreen {
+  background: #ecfdf3;
+}
+
+.icon24 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.icon24 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.rowTextCol {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.rowTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+.rowDesc {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #6a6a6a;
+  text-align: left;
+}
+
+.chevron {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  position: absolute;
+  left: 16px;
+  top: 728px;
+  width: 343px;
+  z-index: 4;
+  box-sizing: border-box;
+}

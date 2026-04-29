@@ -1,0 +1,317 @@
+/* Figma 169:12648 — Trackers / Baby's due date calculator / Step 1 (375×812). */
+
+.root {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.status {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 375px;
+  height: 44px;
+  z-index: 3;
+}
+
+.header {
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  transform: translateX(-50%);
+  width: 343px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.headerGhost {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.instructionBanner {
+  position: absolute;
+  left: 16px;
+  top: 106px;
+  width: 343px;
+  height: 84px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fffaeb;
+}
+
+.instructionInner {
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  width: 311px;
+}
+
+.infoBubble {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  padding: 6px;
+  border-radius: 100px;
+  background: #fdb022;
+}
+
+.infoBubbleInner {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.instructionTextCol {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.instructionTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.16px;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.instructionBody {
+  margin: 0;
+  max-width: 271px;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #6a6a6a;
+  opacity: 0.9;
+  white-space: normal;
+}
+
+.fieldCard {
+  position: absolute;
+  left: 16px;
+  width: 343px;
+  height: 82px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  overflow: hidden;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.fieldCard1 {
+  top: 212px;
+}
+
+.fieldCard2 {
+  top: 310px;
+}
+
+.fieldLabel {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #1a1a1a;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.fieldRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.fieldIcon {
+  position: relative;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+.fieldIcon img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.fieldValueWrap {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fieldValue {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.24px;
+  color: #6a6a6a;
+  white-space: nowrap;
+}
+
+.fieldValueNum {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.24px;
+  color: #6a6a6a;
+}
+
+.pdrCard {
+  position: absolute;
+  left: 16px;
+  top: 420px;
+  width: 343px;
+  min-height: 82px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  overflow: hidden;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.pdrInner {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.calendarBubble {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  padding: 8px;
+  border-radius: 100px;
+  background: #ecfdf3;
+}
+
+.calendarBubbleInner {
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.pdrTextCol {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.pdrTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #1a1a1a;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pdrDate {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #6a6a6a;
+}
+
+.cta {
+  position: absolute;
+  left: 16px;
+  top: 732px;
+  box-sizing: border-box;
+  display: flex;
+  width: 343px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 12px;
+  background: #4979fb;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.ctaText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+}

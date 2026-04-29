@@ -1,0 +1,23 @@
+/* Iconsax-style masked icons — Figma clip path + fill (node groups). */
+
+.wrap {
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.masked {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  object-position: center;
+  pointer-events: none;
+}

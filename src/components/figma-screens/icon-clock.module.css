@@ -1,0 +1,24 @@
+.wrap {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.layer1 {
+  position: absolute;
+  inset: 8.33%;
+}
+
+.layer2 {
+  position: absolute;
+  top: 33.33%;
+  right: 41.67%;
+  bottom: 41.67%;
+  left: 41.67%;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

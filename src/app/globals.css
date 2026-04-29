@@ -1,4 +1,10 @@
-/* Stolzl: add licensed .woff2 files under /public/fonts/ for exact typography. */
+@import "../design-system/tokens.css";
+
+/*
+ * Brand font: Figma uses family name "Stolzl" (with "l" before "z") — e.g. Stolzl Medium.
+ * "Stolz" without the extra "l" is a different spelling; match the design file name "Stolzl".
+ * Drop licensed .woff2 files into /public/fonts/ for pixel-accurate rendering.
+ */
 @font-face {
   font-family: "Stolzl";
   font-style: normal;
@@ -7,6 +13,8 @@
   src:
     local("Stolzl Regular"),
     local("Stolzl"),
+    local("Stolz Regular"),
+    local("Stolz"),
     url("/fonts/Stolzl-Regular.woff2") format("woff2");
 }
 
@@ -17,18 +25,13 @@
   font-display: swap;
   src:
     local("Stolzl Medium"),
+    local("Stolz Medium"),
     url("/fonts/Stolzl-Medium.woff2") format("woff2");
 }
 
 :root {
-  --font-stolzl: "Stolzl", system-ui, sans-serif;
-  --color-surface: #ffffff;
+  --font-brand: "Stolzl", "Stolz", system-ui, sans-serif;
   --color-surface-muted: #f3f6ff;
-  --color-text: #1a1a1a;
-  --color-text-muted: #6a6a6a;
-  --color-primary: #4979fb;
-  --color-primary-soft: #b6c9fd;
-  --color-clay-blue: #1d2a44;
   --color-border-subtle: rgba(73, 121, 251, 0.12);
   --color-page-bg-top: #f5f7ff;
   --color-page-bg-mid: #faf5ff;
@@ -57,7 +60,7 @@ body {
     var(--color-page-bg-mid) 52%,
     var(--color-page-bg-bottom) 100%
   );
-  font-family: var(--font-stolzl), var(--font-fallback), system-ui, sans-serif;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

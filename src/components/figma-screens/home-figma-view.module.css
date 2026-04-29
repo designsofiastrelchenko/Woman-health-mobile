@@ -1,0 +1,701 @@
+/* Figma Home 119:2815 — flow + card matrix; inner vertical rhythm matches frame (status outside shell). */
+
+.page {
+  display: flex;
+  width: 100%;
+  max-width: 375px;
+  min-height: 100dvh;
+  flex-direction: column;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.scroll {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  padding-bottom: 8px;
+}
+
+.topRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 16px 0;
+}
+
+.profileBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #edf2ff;
+}
+
+.greet {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.greetHi {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.12px;
+  color: #1a1a1a;
+}
+
+.greetName {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #1a1a1a;
+}
+
+.topRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.notifBtn {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.notifDot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4979fb;
+}
+
+.premium {
+  display: flex;
+  padding: 4px 10px;
+  align-items: center;
+  border-radius: 8px;
+  background: #edf2ff;
+}
+
+.premiumText {
+  margin: 0;
+  padding: 2px 6px;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.14px;
+  color: #4979fb;
+}
+
+.dateBlock {
+  padding: 22px 16px 0;
+}
+
+.dateLine {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.12px;
+  color: #6a6a6a;
+}
+
+.progressTitle {
+  margin: 4px 0 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #1a1a1a;
+}
+
+.bannerWrap {
+  margin: 16px 16px 0;
+}
+
+.banner {
+  position: relative;
+  height: 120px;
+  overflow: hidden;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(73, 121, 251, 0.02);
+}
+
+.bannerWave1Wrap {
+  position: absolute;
+  left: 50%;
+  top: 11.8px;
+  width: 347px;
+  height: 36.95px;
+  transform: translateX(-50%);
+}
+
+.bannerWave2 {
+  position: absolute;
+  left: 0;
+  top: 76px;
+  width: 342px;
+  height: 31.65px;
+}
+
+.bannerInner {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transform: translateY(-50%);
+}
+
+.bannerTitle {
+  margin: 0;
+  max-width: 177px;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.16px;
+  color: #1a1a1a;
+}
+
+.bannerCta {
+  display: inline-flex;
+  padding: 4px 16px;
+  border-radius: 16px;
+  background: #dbe4fe;
+  text-decoration: none;
+}
+
+.bannerCtaText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.24px;
+  color: #4979fb;
+  white-space: nowrap;
+}
+
+.bannerRing {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  width: 72px;
+  height: 72px;
+  transform: translateY(-50%);
+}
+
+.bannerPct {
+  position: absolute;
+  left: 260px;
+  top: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pctVal {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  color: #4979fb;
+  width: 47px;
+}
+
+.pctSub {
+  margin: 0;
+  padding-bottom: 4px;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  color: #6a6a6a;
+  white-space: nowrap;
+}
+
+.stories {
+  margin-top: 22px;
+  padding: 0 16px;
+}
+
+.storiesTitle {
+  margin: 0 0 16px;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #000;
+}
+
+.storiesRow {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.storyItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.storyRing {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  flex-shrink: 0;
+}
+
+.storyRingSm {
+  width: 76px;
+  height: 76px;
+}
+
+.storyBorder {
+  padding: 4px;
+  border-radius: 38px;
+  border: 1px solid #b6c9fd;
+  background: transparent;
+}
+
+.storyBorderLight {
+  border-color: #edf2ff;
+}
+
+.storyLabel {
+  margin: 0;
+  max-width: 76px;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #6a6a6a;
+}
+
+.statsRow {
+  margin-top: 22px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  overflow-x: auto;
+}
+
+.statCard {
+  position: relative;
+  width: 147px;
+  height: 67px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.statInner {
+  position: absolute;
+  left: 50%;
+  top: 11px;
+  display: flex;
+  transform: translateX(-50%);
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.statIconBox {
+  display: flex;
+  padding: 4px;
+  align-items: center;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.statIconBoxBlue {
+  background: #4979fb;
+}
+
+.statIconBoxRed {
+  background: #e94358;
+}
+
+.statIconBoxViolet {
+  background: #674af8;
+}
+
+.statNum {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.24px;
+  color: #1a1a1a;
+}
+
+.statSuffix {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+  color: #6a6a6a;
+  white-space: nowrap;
+}
+
+.statSuffixMain {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.14px;
+}
+
+.statSuffixSub {
+  margin: 0;
+  font-family: var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.2px;
+}
+
+.statCaption {
+  position: absolute;
+  left: 50%;
+  top: 42px;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #98a2b3;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.cardsRegion {
+  position: relative;
+  margin-top: 22px;
+  height: 348px;
+  margin-left: 16px;
+  width: 343px;
+}
+
+.card {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.cardConsult {
+  left: 0;
+  top: 0;
+  width: 164px;
+  height: 191px;
+  border: 1px solid #ffeee9;
+}
+
+.cardDef {
+  left: 180px;
+  top: 0;
+  width: 163px;
+  height: 141px;
+  border: 1px solid #edf2ff;
+}
+
+.cardTests {
+  left: 0;
+  top: 207px;
+  width: 164px;
+  height: 141px;
+  border: 1px solid #edf2ff;
+}
+
+.cardBirth {
+  left: 180px;
+  top: 157px;
+  width: 163px;
+  height: 191px;
+  border: 1px solid #ffeee9;
+}
+
+.cardTitle {
+  position: absolute;
+  left: 11px;
+  top: 11px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.cardTitleText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.cardBody {
+  position: absolute;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transform: translateX(-50%);
+}
+
+.cardBodyTall {
+  top: 52px;
+}
+
+.cardBodyShort {
+  top: 60px;
+}
+
+.iconRound {
+  display: flex;
+  padding: 12px;
+  border-radius: 100px;
+}
+
+.iconRoundOrange {
+  background: #ffeee9;
+}
+
+.iconRoundYellow {
+  background: #fff2de;
+}
+
+.progressTrack {
+  position: relative;
+  height: 8px;
+  border-radius: 16px;
+}
+
+.progressFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 8px;
+  border-radius: 16px;
+}
+
+.cardTextBold {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.cardTextBook {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.24px;
+  color: #6a6a6a;
+}
+
+.linkMore {
+  margin: 0;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.tableSection {
+  margin-top: 22px;
+  padding: 0 16px 24px;
+}
+
+.tableTitle {
+  margin: 0 0 16px;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #1a1a1a;
+}
+
+.tableList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tableRow {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  overflow: hidden;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.tableRowLink {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.profileTap {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.cardBlockLink {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.bannerCtaLink {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.tableChevron {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.tableLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconSm {
+  display: flex;
+  padding: 8px;
+  border-radius: 100px;
+}
+
+.iconSmViolet {
+  background: #f0edfe;
+}
+
+.iconSmOrange {
+  background: #ffeee9;
+}
+
+.iconSmBlue {
+  background: #edf2ff;
+}
+
+.iconSmYellow {
+  background: #fff8ee;
+}
+
+.tableTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.tableLine1 {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #1a1a1a;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.tableLine2 {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #6a6a6a;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.navWrap {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 10px 16px 14px;
+  background: #fff;
+  border-top: 1px solid #edf2ff;
+}

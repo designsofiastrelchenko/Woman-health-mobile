@@ -1,0 +1,212 @@
+/* Figma Notification Page 108:2230 — inner top = Figma y − 44 */
+
+.root {
+  position: relative;
+  width: 100%;
+  min-height: 768px;
+}
+
+.header {
+  position: absolute;
+  left: 50%;
+  top: 16px;
+  transform: translateX(-50%);
+  display: flex;
+  width: 343px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #1a1a1a;
+}
+
+.headerSpacer {
+  width: 24px;
+  height: 24px;
+}
+
+.list1 {
+  position: absolute;
+  left: 16px;
+  top: 67px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.list2 {
+  position: absolute;
+  left: 16px;
+  top: 425px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.divider {
+  position: absolute;
+  left: 16px;
+  top: 389px;
+  display: flex;
+  width: 343px;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.dividerLine {
+  position: relative;
+  height: 0;
+  min-width: 0;
+  flex: 1 1 0;
+}
+
+.dividerLine img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dividerLabel {
+  margin: 0;
+  flex-shrink: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.24px;
+  color: #6a6a6a;
+  white-space: nowrap;
+}
+
+.row {
+  display: flex;
+  width: 343px;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.rowMain {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.iconBubble {
+  display: flex;
+  flex-shrink: 0;
+  padding: 14px;
+  border-radius: 100px;
+}
+
+.iconBubbleBlue {
+  background: #edf2ff;
+}
+
+.iconBubbleYellow {
+  background: #fff2de;
+}
+
+.iconBubbleViolet {
+  background: #e1dbfe;
+}
+
+.iconBubbleGreen {
+  background: #ecfdf3;
+}
+
+.iconImg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.body {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.desc {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.24px;
+  color: #6a6a6a;
+}
+
+.descWrap {
+  width: 264px;
+}
+
+.descWide {
+  width: 287px;
+}
+
+.timeRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.timeText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #6a6a6a;
+  white-space: nowrap;
+}
+
+.dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+}
+
+.rowWide {
+  width: 343px;
+  justify-content: flex-start;
+}
+
+.rowWide .body {
+  width: 287px;
+}

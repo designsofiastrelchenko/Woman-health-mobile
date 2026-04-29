@@ -1,0 +1,115 @@
+/* Figma 192:3929 — Change email (375×812). */
+
+.root {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.status {
+  z-index: 2;
+}
+
+.head {
+  position: absolute;
+  left: 16px;
+  top: 60px;
+  width: 343px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headTitle {
+  margin: 0;
+}
+
+.headGhost {
+  width: 24px;
+  height: 24px;
+}
+
+.currentLine {
+  position: absolute;
+  left: 16px;
+  top: 104px;
+  width: 343px;
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.14px;
+  text-align: center;
+  color: #6a6a6a;
+}
+
+.currentDark {
+  color: #1a1a1a;
+}
+
+.form {
+  position: absolute;
+  left: 16px;
+  top: 332px;
+  width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.label {
+  margin: 0;
+}
+
+.inputBox {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #dde5e9;
+  background: #fff;
+}
+
+.inputText {
+  margin: 0;
+}
+
+.eyeSpacer {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.btn {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 12px;
+  background: #4979fb;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btnText {
+  margin: 0;
+  color: #fff;
+}

@@ -6,8 +6,8 @@ export default function OnboardingNotFound() {
     <main className={styles.wrap}>
       <p className={styles.title}>Шаг не найден</p>
       <p className={styles.text}>Проверь адрес или вернись к онбордингу.</p>
-      <Link className={styles.link} href="/onboarding/1">
-        К первому шагу
+      <Link className={styles.link} href="/onboarding">
+        К онбордингу
       </Link>
     </main>
   );

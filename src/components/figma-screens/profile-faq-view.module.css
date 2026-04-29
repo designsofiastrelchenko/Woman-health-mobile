@@ -1,0 +1,241 @@
+/* Figma 92:26598 — FAQ list; 92:26945 — FAQ with first question expanded (375×812). */
+
+.root {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.status {
+  z-index: 2;
+}
+
+.head {
+  position: absolute;
+  left: 16px;
+  top: 60px;
+  width: 343px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.headGhost {
+  width: 24px;
+  height: 24px;
+}
+
+.rowField {
+  position: absolute;
+  left: 16px;
+  width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.r0 {
+  top: 119px;
+}
+
+.r1 {
+  top: 181px;
+}
+
+.r1Expanded {
+  top: 247px;
+}
+
+.r2 {
+  top: 243px;
+}
+
+.r2Expanded {
+  top: 309px;
+}
+
+.r3 {
+  top: 305px;
+}
+
+.r3Expanded {
+  top: 371px;
+}
+
+.r4 {
+  top: 367px;
+}
+
+.r4Expanded {
+  top: 433px;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 50px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 1px solid #dde5e9;
+  background: #fff;
+}
+
+.inputBoxExpanded {
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  min-height: 116px;
+  padding: 18px 16px;
+  gap: 0;
+}
+
+.rowTop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.question {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #404040;
+}
+
+.answer {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #404040;
+}
+
+.plusWrap {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plusWrapRotate {
+  width: 28.284px;
+  height: 28.284px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plusWrapRotateInner {
+  transform: rotate(45deg);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plusImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer {
+  position: absolute;
+  left: 16px;
+  top: 646px;
+  width: 343px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footerTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  width: 100%;
+}
+
+.footerTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.16px;
+  color: #1a1a1a;
+}
+
+.footerSub {
+  margin: 0;
+  max-width: 100%;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.24px;
+  color: #6a6a6a;
+  white-space: pre-wrap;
+}
+
+.btnPrimary {
+  display: flex;
+  width: 100%;
+  height: 56px;
+  padding: 16px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 12px;
+  background: #4979fb;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btnLabel {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #fff;
+  text-align: center;
+}

@@ -1,0 +1,173 @@
+/* Figma 169:11241 — Deficit calculator / Step 2 (375×812). */
+
+.root {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.status {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 375px;
+  height: 44px;
+  z-index: 3;
+}
+
+.header {
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  transform: translateX(-50%);
+  width: 343px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.headerGhost {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.block {
+  position: absolute;
+  left: 16px;
+  width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.b1 {
+  top: 106px;
+}
+
+.b2 {
+  top: 214px;
+}
+
+.b3 {
+  top: 320px;
+}
+
+.b4 {
+  top: 426px;
+}
+
+.q {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #404040;
+}
+
+.pair {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.btnFill {
+  box-sizing: border-box;
+  display: flex;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  width: 163px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #4979fb;
+  border: none;
+  cursor: pointer;
+}
+
+.btnFill span {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btnOutline {
+  box-sizing: border-box;
+  display: flex;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  width: 163px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1.5px solid #4979fb;
+  cursor: pointer;
+}
+
+.btnOutline span {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #1a1a1a;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.submit {
+  position: absolute;
+  left: 16px;
+  top: 732px;
+  width: 343px;
+  height: 56px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 12px;
+  background: #4979fb;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.submit span {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+}

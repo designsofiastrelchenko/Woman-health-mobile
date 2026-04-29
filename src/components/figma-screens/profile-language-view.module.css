@@ -1,0 +1,86 @@
+/* Figma 92:27119 — Language (375×812). */
+
+.root {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.status {
+  z-index: 2;
+}
+
+.head {
+  position: absolute;
+  left: 16px;
+  top: 60px;
+  width: 343px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headTitle {
+  margin: 0;
+}
+
+.headGhost {
+  width: 24px;
+  height: 24px;
+}
+
+.field {
+  position: absolute;
+  left: 16px;
+  width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.f1 {
+  top: 119px;
+}
+
+.f2 {
+  top: 185px;
+}
+
+.f3 {
+  top: 251px;
+}
+
+.inputBox {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #dde5e9;
+  background: #fff;
+}
+
+.inputBoxActive {
+  border-color: #4979fb;
+}
+
+.inputText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #404040;
+}
+
+.spacer20 {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}

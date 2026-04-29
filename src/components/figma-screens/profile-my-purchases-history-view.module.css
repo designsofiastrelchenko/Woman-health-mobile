@@ -1,0 +1,77 @@
+/* Figma 97:30039 — history cards. */
+
+.card {
+  position: absolute;
+  left: 16px;
+  width: 343px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 24px;
+  border-radius: 16px;
+  border: 1px solid #edf2ff;
+  background: #fff;
+}
+
+.c1 {
+  top: 179px;
+}
+
+.c2 {
+  top: 280px;
+}
+
+.c3 {
+  top: 381px;
+}
+
+.c4 {
+  top: 482px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.14px;
+  color: #1a1a1a;
+}
+
+.price {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.14px;
+  color: #6a6a6a;
+}
+
+.pill {
+  align-self: flex-start;
+  display: flex;
+  padding: 2px 10px;
+  border-radius: 16px;
+  background: #e1dbfe;
+}
+
+.pillText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.24px;
+  color: #674af8;
+}

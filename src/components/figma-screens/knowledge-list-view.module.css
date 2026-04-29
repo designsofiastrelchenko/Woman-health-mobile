@@ -1,0 +1,374 @@
+/* Figma 140:10057 — Knowledge (375×812). */
+
+.root {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.status {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 375px;
+  height: 44px;
+  z-index: 3;
+}
+
+.head {
+  position: absolute;
+  left: 16px;
+  top: 60px;
+  width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.headRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.headTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #1a1a1a;
+}
+
+.headSettings {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.headSub {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #6a6a6a;
+}
+
+.search {
+  position: absolute;
+  left: 16px;
+  top: 118px;
+  width: 343px;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  padding: 0 16px;
+  border: 1px solid #dde5e9;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.searchIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.searchIcon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.searchPlaceholder {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #c7c9d9;
+}
+
+.chips {
+  position: absolute;
+  left: 16px;
+  top: 184px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.chip {
+  display: flex;
+  align-items: flex-start;
+  padding: 4px 16px;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+.chipActive {
+  background: #4979fb;
+}
+
+.chipInactive {
+  background: #dbe4fe;
+}
+
+.chipText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.24px;
+  white-space: nowrap;
+}
+
+.chipTextActive {
+  color: #edf2ff;
+}
+
+.chipTextInactive {
+  color: #4979fb;
+}
+
+.table {
+  position: absolute;
+  left: 16px;
+  top: 236px;
+  width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.rowInner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.iconBubble {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px;
+  border-radius: 100px;
+  flex-shrink: 0;
+}
+
+.iconBubbleViolet {
+  background: #f0edfe;
+}
+
+.iconBubbleWarm {
+  background: #fff8ee;
+}
+
+.iconBubbleGreen {
+  background: #ecfdf3;
+}
+
+.iconBubbleBlue {
+  background: #edf2ff;
+}
+
+.sax24 {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.rowTextCol {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.rowTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.metaRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.badge {
+  display: flex;
+  align-items: flex-start;
+  padding: 4px 10px;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+.badgeText {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.badgeViolet {
+  background: #f0edfe;
+}
+
+.badgeViolet .badgeText {
+  color: #674af8;
+}
+
+.badgeWarm {
+  background: #fff8ee;
+}
+
+.badgeWarm .badgeText {
+  color: #febd59;
+}
+
+.badgeGreen {
+  background: #ecfdf3;
+}
+
+.badgeGreen .badgeText {
+  color: #32d583;
+}
+
+.badgeBlue {
+  background: #edf2ff;
+}
+
+.badgeBlue .badgeText {
+  color: #4979fb;
+}
+
+.metaMuted {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #6a6a6a;
+  white-space: nowrap;
+}
+
+.metaWithCheck {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+}
+
+.metaWithCheckWide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 75px;
+}
+
+.check14 {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.check14 img {
+  display: block;
+  position: absolute;
+  max-width: none;
+}
+
+.checkOuter {
+  inset: 8.33%;
+  width: auto;
+  height: auto;
+}
+
+.checkInner {
+  inset: 37.5% 33.33%;
+}
+
+.arrow24 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.arrowVec {
+  position: absolute;
+  bottom: 25%;
+  left: 37.5%;
+  right: 37.5%;
+  top: 25%;
+}
+
+.arrowVec img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.nav {
+  position: absolute;
+  left: 16px;
+  top: 728px;
+  width: 343px;
+  z-index: 4;
+  box-sizing: border-box;
+}

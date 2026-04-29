@@ -1,0 +1,398 @@
+/* Figma 169:11589 — Deficit calculator / Result (375×1008). */
+
+.root {
+  position: relative;
+  width: 375px;
+  min-height: 1008px;
+  margin: 0 auto;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.status {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 375px;
+  height: 44px;
+  z-index: 3;
+}
+
+.header {
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  transform: translateX(-50%);
+  width: 343px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.headerGhost {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.banner {
+  position: absolute;
+  left: 50%;
+  top: 106px;
+  transform: translateX(-50%);
+  width: 343px;
+  height: 120px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 10px 0 rgba(73, 121, 251, 0.02);
+}
+
+.wave1 {
+  position: absolute;
+  left: 50%;
+  top: 11.8px;
+  transform: translateX(-50%);
+  width: 347px;
+  height: 36.949px;
+}
+
+.wave1 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.wave2 {
+  position: absolute;
+  left: calc(50% - 0.5px);
+  top: 76px;
+  transform: translateX(-50%);
+  width: 342px;
+  height: 31.653px;
+}
+
+.wave2 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.bannerContent {
+  position: absolute;
+  left: 24px;
+  top: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  width: 235px;
+}
+
+.metaRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 235px;
+}
+
+.metaRow p {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #6a6a6a;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 3px;
+  height: 3px;
+  flex-shrink: 0;
+}
+
+.dot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bannerTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.16px;
+  color: #1a1a1a;
+  width: 218px;
+}
+
+.bannerNote {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #6a6a6a;
+  width: 235px;
+  white-space: pre-wrap;
+}
+
+.table {
+  position: absolute;
+  left: 16px;
+  top: 248px;
+  width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.rowSimple {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.rowLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.rank {
+  display: flex;
+  align-items: flex-start;
+  padding: 9px 8px;
+  border-radius: 100px;
+  background: #edf2ff;
+}
+
+.rank p {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #4979fb;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.rankTight {
+  padding: 9px 6px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.title12 {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #1a1a1a;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.body10 {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #6a6a6a;
+  width: 217px;
+  white-space: pre-wrap;
+}
+
+.chevron {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chevron90 {
+  transform: rotate(90deg);
+}
+
+.cardExpand {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.expandHead {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 311px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  width: 311px;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.sectionBody {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #6a6a6a;
+  width: 100%;
+}
+
+.footer {
+  position: absolute;
+  left: 16px;
+  top: 784px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.btnPrimary {
+  box-sizing: border-box;
+  display: flex;
+  width: 343px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 12px;
+  background: #4979fb;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btnPrimary span {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.btnOutline {
+  box-sizing: border-box;
+  display: flex;
+  width: 343px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1.5px solid #4979fb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btnOutline span {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.btnGhost {
+  box-sizing: border-box;
+  display: flex;
+  width: 343px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 12px;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btnGhost span {
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #4979fb;
+  white-space: nowrap;
+}

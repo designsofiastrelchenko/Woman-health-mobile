@@ -1,0 +1,255 @@
+/* Figma 162:6643 — Knowledge / Guide (375×812). */
+
+.root {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.status {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 375px;
+  height: 44px;
+  z-index: 3;
+}
+
+.header {
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  transform: translateX(-50%);
+  width: 343px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerTitle {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.headerSpacer {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.titleCard {
+  position: absolute;
+  left: 16px;
+  top: 100px;
+  width: 343px;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  border: 1px solid #edf2ff;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.titleCard h2 {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.16px;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.metaRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.metaRow p {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.14px;
+  color: #6a6a6a;
+  white-space: nowrap;
+}
+
+.sax24 {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.preview {
+  position: absolute;
+  left: 16px;
+  top: 202px;
+  width: 343px;
+  height: 192px;
+  border-radius: 16px;
+  overflow: hidden;
+  filter: drop-shadow(0 2px 2.5px rgba(0, 0, 0, 0.05));
+  box-sizing: border-box;
+}
+
+.previewBg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 343px;
+  height: 192px;
+  background: #d9d9d9;
+}
+
+.note48 {
+  position: absolute;
+  left: 148px;
+  top: 72px;
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+}
+
+.about {
+  position: absolute;
+  left: 16px;
+  top: 410px;
+  width: 343px;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  border: 1px solid #edf2ff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.about h3 {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.about p {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.24px;
+  color: #6a6a6a;
+  white-space: pre-wrap;
+}
+
+.downloadRow {
+  position: absolute;
+  left: 16px;
+  top: 572px;
+  width: 343px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  border: 1px solid #edf2ff;
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.downloadCol {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.downloadCol strong {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.downloadCol span {
+  margin: 0;
+  width: 217px;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #6a6a6a;
+}
+
+.docIcon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.cta {
+  position: absolute;
+  left: 16px;
+  top: 740px;
+  width: 343px;
+  height: 56px;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: #4979fb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cta p {
+  margin: 0;
+  font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+}
