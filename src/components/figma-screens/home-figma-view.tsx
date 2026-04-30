@@ -12,7 +12,21 @@ export function HomeFigmaView() {
       <div className={styles.scroll}>
         <div className={styles.topRow}>
           <Link href="/profile" className={`${styles.profileBlock} ${styles.profileTap}`} aria-label="Профиль">
-            <div className={styles.avatar} aria-hidden />
+            <div className={styles.avatar} aria-hidden>
+              <div className={styles.avatarLayers}>
+                {/* Same Figma stack as profile screen (base + hair/face overlay). */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img alt="" className={styles.avatarBase} src="/icons/figma/d7782ac90c81a41ce9f2a97569e452e11b2e2e1f.png" />
+                <div className={styles.avatarOverlay}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    alt=""
+                    className={styles.avatarOverlayImg}
+                    src="/icons/figma/943898faecd477f7d486f17373ff66441ae92315.png"
+                  />
+                </div>
+              </div>
+            </div>
             <div className={styles.greet}>
               <p className={styles.greetHi}>Привет,</p>
               <p className={styles.greetName}>Анна!</p>
@@ -27,7 +41,6 @@ export function HomeFigmaView() {
                 height={24}
                 unoptimized
               />
-              <span className={styles.notifDot} aria-hidden />
             </Link>
             <div className={styles.premium}>
               <p className={styles.premiumText}>Премиум</p>
@@ -86,133 +99,96 @@ export function HomeFigmaView() {
           <p className={styles.storiesTitle}>Истории</p>
           <div className={styles.storiesRow}>
             <div className={styles.storyItem}>
-              <div className={`${styles.storyRing} ${styles.storyBorder}`}>
-                <Image
-                  src="/icons/figma/8e699a3af65d90df8ab2036f28267b847441b293.svg"
-                  alt=""
-                  width={68}
-                  height={68}
-                  style={{ display: "block" }}
-                  unoptimized
-                />
-                <span
-                  style={{
-                    position: "absolute",
-                    left: 11,
-                    top: 11,
-                    width: 51,
-                    height: 51,
-                  }}
-                >
-                  <Image
-                    src="/icons/figma/4af216d1c94c9049167ab767f125d4ceb3a20866.png"
-                    alt=""
-                    width={51}
-                    height={51}
-                    unoptimized
-                  />
-                </span>
-              </div>
-              <p className={styles.storyLabel}>Гормоны</p>
-            </div>
-            <div className={styles.storyItem}>
-              <div className={`${styles.storyRing} ${styles.storyBorder}`}>
-                <Image
-                  src="/icons/figma/de3221cf86a0a3c7f2e31b8af05023c778b19f91.svg"
-                  alt=""
-                  width={68}
-                  height={68}
-                  unoptimized
-                />
-                <span
-                  style={{
-                    position: "absolute",
-                    left: 6,
-                    top: 10,
-                    width: 61,
-                    height: 61,
-                  }}
-                >
-                  <Image
-                    src="/icons/figma/f7ca37b75329f0744ed6183d925e929bd89579c0.png"
-                    alt=""
-                    width={61}
-                    height={61}
-                    unoptimized
-                  />
-                </span>
-              </div>
-              <p className={styles.storyLabel}>Цикл</p>
-            </div>
-            <div className={styles.storyItem}>
-              <div className={`${styles.storyRing} ${styles.storyRingSm}`}>
+              <div className={styles.storyRing}>
                 <Image
                   src="/icons/figma/d003c3eb00fa29be407524a859f7b3c89dcf2d46.svg"
                   alt=""
                   width={76}
                   height={76}
+                  className={styles.storyRingBg}
                   unoptimized
                 />
-                <span
-                  style={{
-                    position: "absolute",
-                    left: 7,
-                    top: 7,
-                    width: 61,
-                    height: 61,
-                  }}
-                >
+                <div className={`${styles.storyThumb} ${styles.storyThumb51}`}>
+                  <Image
+                    src="/icons/figma/4af216d1c94c9049167ab767f125d4ceb3a20866.png"
+                    alt=""
+                    width={51}
+                    height={51}
+                    className={styles.storyThumbImg}
+                    unoptimized
+                  />
+                </div>
+              </div>
+              <p className={styles.storyLabel}>Гормоны</p>
+            </div>
+            <div className={styles.storyItem}>
+              <div className={styles.storyRing}>
+                <Image
+                  src="/icons/figma/d003c3eb00fa29be407524a859f7b3c89dcf2d46.svg"
+                  alt=""
+                  width={76}
+                  height={76}
+                  className={styles.storyRingBg}
+                  unoptimized
+                />
+                <div className={`${styles.storyThumb} ${styles.storyThumb61}`}>
+                  <Image
+                    src="/icons/figma/f7ca37b75329f0744ed6183d925e929bd89579c0.png"
+                    alt=""
+                    width={61}
+                    height={61}
+                    className={styles.storyThumbImg}
+                    unoptimized
+                  />
+                </div>
+              </div>
+              <p className={styles.storyLabel}>Цикл</p>
+            </div>
+            <div className={styles.storyItem}>
+              <div className={styles.storyRing}>
+                <Image
+                  src="/icons/figma/d003c3eb00fa29be407524a859f7b3c89dcf2d46.svg"
+                  alt=""
+                  width={76}
+                  height={76}
+                  className={styles.storyRingBg}
+                  unoptimized
+                />
+                <div className={`${styles.storyThumb} ${styles.storyThumb61}`}>
                   <Image
                     src="/icons/figma/279db901f53cd6d6c6745db1f884b83ea57b1f74.png"
                     alt=""
                     width={61}
                     height={61}
+                    className={styles.storyThumbImg}
                     unoptimized
                   />
-                </span>
+                </div>
               </div>
               <p className={styles.storyLabel}>Питание</p>
             </div>
             <div className={styles.storyItem}>
-              <div className={`${styles.storyRing} ${styles.storyBorderLight}`}>
-                <Image
-                  src="/icons/figma/de3221cf86a0a3c7f2e31b8af05023c778b19f91.svg"
-                  alt=""
-                  width={68}
-                  height={68}
-                  unoptimized
-                />
-                <span
-                  style={{
-                    position: "absolute",
-                    left: 11,
-                    top: 11,
-                    width: 51,
-                    height: 51,
-                  }}
-                >
-                  <Image
-                    src="/icons/figma/74261bf19683cd30badad1c968c9b41c7d7aae13.png"
-                    alt=""
-                    width={51}
-                    height={51}
-                    unoptimized
-                  />
-                </span>
-              </div>
-              <p className={styles.storyLabel}>Анализы</p>
-            </div>
-            <div className={styles.storyItem}>
-              <div className={styles.storyRingSm}>
+              <div className={styles.storyRing}>
                 <Image
                   src="/icons/figma/59e4b5aa227fbda25a28213c427301c4b5557fee.svg"
                   alt=""
                   width={76}
                   height={76}
+                  className={styles.storyRingBg}
                   unoptimized
                 />
+                <div className={`${styles.storyThumb} ${styles.storyThumb51}`}>
+                  <Image
+                    src="/icons/figma/74261bf19683cd30badad1c968c9b41c7d7aae13.png"
+                    alt=""
+                    width={51}
+                    height={51}
+                    className={styles.storyThumbImg}
+                    unoptimized
+                  />
+                </div>
               </div>
-              <p className={styles.storyLabel}>Доктор</p>
+              <p className={styles.storyLabel}>Анализы</p>
             </div>
           </div>
         </section>

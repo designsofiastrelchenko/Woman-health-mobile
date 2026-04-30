@@ -41,7 +41,7 @@ function GoArrowGray() {
 
 function Check18() {
   return (
-    <div className={styles.lessonIconGreen}>
+    <div className={`${styles.lessonIcon} ${styles.lessonIconGreen}`}>
       <div className={styles.clock18} style={{ position: "relative" }}>
         <img
           alt=""
@@ -75,14 +75,14 @@ function Check18() {
 
 function Clock18() {
   return (
-    <div className={styles.lessonIconYellow}>
+    <div className={`${styles.lessonIcon} ${styles.lessonIconYellow}`}>
       <div className={styles.clock18}>
         <KnowledgeMaskedIcon
           maskSrc={IMG.clockMask}
           innerSrc={IMG.clockFill}
           size={18}
-          maskPosition="-0.938px -0.938px"
-          maskLayerInset="5.21%"
+          maskPosition="0 0"
+          maskLayerInset="0"
         />
       </div>
     </div>

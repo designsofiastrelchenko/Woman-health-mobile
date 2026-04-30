@@ -2,14 +2,19 @@
 
 .wrap {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  overflow: hidden;
+  /* Do not clip: negative innerImgInset scales the fill; clipping hid strokes (mask still clips paint). */
+  overflow: visible;
 }
 
 .masked {
   position: absolute;
   inset: 0;
   pointer-events: none;
+  overflow: visible;
 }
 
 .fill {

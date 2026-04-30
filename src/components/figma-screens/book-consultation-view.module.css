@@ -133,8 +133,9 @@
   left: 16px;
   top: 159px;
   display: flex;
-  width: 440px;
-  max-width: calc(100% - 16px);
+  width: 343px;
+  max-width: calc(100% - 32px);
+  box-sizing: border-box;
   flex-direction: column;
   align-items: flex-start;
   gap: 21px;
@@ -172,14 +173,43 @@
 }
 
 .arrowDown {
+  display: flex;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
   transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}
+
+.arrowDownImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 18px;
+  max-height: 18px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .dateRow {
   display: flex;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   flex-direction: row;
   align-items: flex-start;
   gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 2px;
+}
+
+.dateRow::-webkit-scrollbar {
+  display: none;
 }
 
 .dateCell {

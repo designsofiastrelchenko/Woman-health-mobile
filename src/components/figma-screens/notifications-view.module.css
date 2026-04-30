@@ -105,9 +105,17 @@
 
 .iconBubble {
   display: flex;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
   flex-shrink: 0;
-  padding: 14px;
-  border-radius: 100px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .iconBubbleBlue {
@@ -130,6 +138,16 @@
   display: block;
   width: 20px;
   height: 20px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* Next/Image wraps the img in a span; keep wrapper from stretching the glyph. */
+.iconBubble > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
 }
 
 .body {

@@ -128,8 +128,8 @@ export function TrackersCycleCalculatorView() {
                   maskSrc="/icons/figma/329d600c34e04aaae00fe7283e2d7bae1ccd2630.svg"
                   innerSrc={IMG.heartFill}
                   size={16}
-                  maskPosition="-0.833px -1.566px"
-                  maskLayerInset="9.79% 5.21%"
+                  maskPosition="0 0"
+                  maskLayerInset="0"
                 />
               </div>
               <div className={styles.labelRow} data-node-id="166:9617">

@@ -11,12 +11,14 @@ function IconArrowDownSmall() {
   return (
     <span className={styles.arrowDownWrap}>
       <span className={styles.arrowDown}>
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src="/icons/figma/dc4508dc1ca821633c49c816fbd159e45cff5484.svg"
           alt=""
+          className={styles.arrowDownImg}
           width={18}
           height={18}
-          unoptimized
+          draggable={false}
         />
       </span>
     </span>
@@ -133,7 +135,7 @@ export function BookConsultationView({ variant }: BookConsultationViewProps) {
           <DateCell day="Ср" date="4" selected={!isDisable} showDot />
           <DateCell day="Чт" date="5" />
           <DateCell day="ПТ" date="6" showDot />
-          <DateCell day="Sat" date="7" />
+          <DateCell day="Сб" date="7" />
         </div>
       </div>
 

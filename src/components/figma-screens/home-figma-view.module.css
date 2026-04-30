@@ -34,11 +34,48 @@
 }
 
 .avatar {
+  position: relative;
   width: 40px;
   height: 40px;
   flex-shrink: 0;
   border-radius: 50%;
+  overflow: hidden;
   background: #edf2ff;
+}
+
+/* Mirrors profile-figma-view `.avatarLayers` / overlay offsets at 40×40. */
+.avatarLayers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatarBase {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.avatarOverlay {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.avatarOverlayImg {
+  position: absolute;
+  left: 0;
+  top: -6.8%;
+  width: 100%;
+  height: 150.47%;
+  max-width: none;
+  object-fit: cover;
 }
 
 .greet {
@@ -75,7 +112,6 @@
 }
 
 .notifBtn {
-  position: relative;
   display: block;
   width: 24px;
   height: 24px;
@@ -85,33 +121,31 @@
   cursor: pointer;
 }
 
-.notifDot {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #4979fb;
-}
-
+/* Figma frame ~100×26: outlined tag; no double padding on inner <p>. */
 .premium {
-  display: flex;
-  padding: 4px 10px;
+  display: inline-flex;
+  box-sizing: border-box;
   align-items: center;
-  border-radius: 8px;
-  background: #edf2ff;
+  justify-content: center;
+  width: 100px;
+  height: 26px;
+  flex-shrink: 0;
+  padding: 0;
+  border-radius: 100px;
+  border: 1px solid #4979fb;
+  background: #fff;
 }
 
 .premiumText {
   margin: 0;
-  padding: 2px 6px;
+  padding: 0;
   font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 14px;
-  letter-spacing: 0.14px;
+  letter-spacing: 0.12px;
   color: #4979fb;
+  white-space: nowrap;
 }
 
 .dateBlock {
@@ -282,6 +316,7 @@
   flex-shrink: 0;
 }
 
+/* One 76×76 SVG per ring (stroke + fill centered in asset); thumb centered with transform. */
 .storyRing {
   position: relative;
   width: 76px;
@@ -289,20 +324,38 @@
   flex-shrink: 0;
 }
 
-.storyRingSm {
+.storyRingBg {
+  display: block;
   width: 76px;
   height: 76px;
 }
 
-.storyBorder {
-  padding: 4px;
-  border-radius: 38px;
-  border: 1px solid #b6c9fd;
-  background: transparent;
+.storyThumb {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.storyBorderLight {
-  border-color: #edf2ff;
+.storyThumb51 {
+  width: 51px;
+  height: 51px;
+}
+
+.storyThumb61 {
+  width: 61px;
+  height: 61px;
+}
+
+.storyThumbImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .storyLabel {
@@ -697,5 +750,4 @@
   justify-content: center;
   padding: 10px 16px 14px;
   background: #fff;
-  border-top: 1px solid #edf2ff;
 }

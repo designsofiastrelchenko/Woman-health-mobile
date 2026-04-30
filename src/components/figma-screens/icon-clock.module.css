@@ -1,9 +1,12 @@
 .wrap {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   flex-shrink: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
 }
 
+/* Figma stacks two slices in fixed rects; each img must fill its rect (not independent contain-center). */
 .layer1 {
   position: absolute;
   inset: 8.33%;
@@ -18,7 +21,11 @@
 }
 
 .img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
 }

@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { ChevronRightIcon } from "@/components/figma-screens/chevron-right-icon";
 import { ProfileFigmaStatusBar } from "@/components/figma-screens/profile-figma-status-bar";
 import { KnowledgeMaskedIcon } from "@/components/figma-screens/knowledge-masked-icon";
 import { NavigationBar } from "@/components/ui/navigation-bar";
@@ -10,21 +11,10 @@ const IMG = {
   bookFill: "/icons/figma/b4600b1af47c8cd368b1032006cc0599c1ea554d.svg",
   note: "/icons/figma/913c03b054ed5a229445a6e4c2bcdaf737f66b98.svg",
   mic: "/icons/figma/8dba33902a512dac388032d720a48da0f2870061.svg",
-  arrow: "/icons/figma/dc4508dc1ca821633c49c816fbd159e45cff5484.svg",
   search: "/icons/figma/27d9b915f2687d2a1080d9aba17ec095e811b79d.svg",
 } as const;
 
 const STATUS_RIGHT = "/icons/figma/fff8b42c3c4d1c153ff0ab5d627fa1b8b3a7f0fc.svg";
-
-function ArrowRight() {
-  return (
-    <div className={styles.arrow24} data-name="icon / arrow - right">
-      <div className={styles.arrowVec}>
-        <img alt="" src={IMG.arrow} draggable={false} />
-      </div>
-    </div>
-  );
-}
 
 /** Figma 200:4540 — Knowledge / Exclusive Materials (Клуб). */
 export function KnowledgeClubView() {
@@ -62,36 +52,6 @@ export function KnowledgeClubView() {
         </p>
       </div>
 
-      <div className={styles.chipsScroll} data-node-id="200:4668">
-        <div className={styles.chipsInner}>
-          <div className={`${styles.chip} ${styles.chipActive}`} data-node-id="200:4669">
-            <p className={`${styles.chipText} ${styles.chipTextActive}`} data-node-id="200:4670">
-              Все
-            </p>
-          </div>
-          <div className={`${styles.chip} ${styles.chipInactive}`} data-node-id="200:4671">
-            <p className={`${styles.chipText} ${styles.chipTextInactive}`} data-node-id="200:4672">
-              Чек-листы
-            </p>
-          </div>
-          <div className={`${styles.chip} ${styles.chipInactive}`} data-node-id="200:4673">
-            <p className={`${styles.chipText} ${styles.chipTextInactive}`} data-node-id="200:4674">
-              Вебинары
-            </p>
-          </div>
-          <div className={`${styles.chip} ${styles.chipInactive}`} data-node-id="200:4675">
-            <p className={`${styles.chipText} ${styles.chipTextInactive}`} data-node-id="200:4676">
-              Гайды
-            </p>
-          </div>
-          <div className={`${styles.chip} ${styles.chipInactive}`} data-node-id="200:4677">
-            <p className={`${styles.chipText} ${styles.chipTextInactive}`} data-node-id="200:4678">
-              Шаблоны
-            </p>
-          </div>
-        </div>
-      </div>
-
       <div className={styles.table} data-node-id="200:4541">
         <Link href="/knowledge/webinar" className={styles.row} data-node-id="200:4542">
           <div className={styles.rowInner} data-node-id="200:4543">
@@ -100,9 +60,8 @@ export function KnowledgeClubView() {
                 <KnowledgeMaskedIcon
                   innerSrc={IMG.playFill}
                   size={24}
-                  maskPosition="-1.97px -2px"
+                  maskPosition="0 0"
                   maskLayerInset="8.33% 8.46% 8.33% 8.21%"
-                  innerImgInset="-3.75%"
                 />
               </div>
             </div>
@@ -122,7 +81,7 @@ export function KnowledgeClubView() {
               </div>
             </div>
           </div>
-          <ArrowRight />
+          <ChevronRightIcon />
         </Link>
 
         <div className={styles.row} data-node-id="200:4579">
@@ -153,7 +112,7 @@ export function KnowledgeClubView() {
               </div>
             </div>
           </div>
-          <ArrowRight />
+          <ChevronRightIcon />
         </div>
 
         <Link href="/knowledge/guide" className={styles.row} data-node-id="200:4600">
@@ -184,7 +143,7 @@ export function KnowledgeClubView() {
               </div>
             </div>
           </div>
-          <ArrowRight />
+          <ChevronRightIcon />
         </Link>
 
         <div className={styles.row} data-node-id="200:4621">
@@ -215,7 +174,7 @@ export function KnowledgeClubView() {
               </div>
             </div>
           </div>
-          <ArrowRight />
+          <ChevronRightIcon />
         </div>
 
         <div className={styles.row} data-node-id="200:4642">
@@ -246,7 +205,7 @@ export function KnowledgeClubView() {
               </div>
             </div>
           </div>
-          <ArrowRight />
+          <ChevronRightIcon />
         </div>
       </div>
 

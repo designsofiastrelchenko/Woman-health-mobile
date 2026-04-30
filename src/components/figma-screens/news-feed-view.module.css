@@ -31,7 +31,7 @@
   width: 343px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
   align-items: flex-start;
 }
 
@@ -51,7 +51,7 @@
   line-height: normal;
   letter-spacing: 0.18px;
   color: #1a1a1a;
-  text-align: center;
+  text-align: left;
 }
 
 .headSettings {
@@ -69,6 +69,7 @@
   line-height: normal;
   letter-spacing: 0.12px;
   color: #6a6a6a;
+  text-align: left;
 }
 
 /* --- Card shell (375×342 video, 375×237 text, 375×370 carousel) --- */
@@ -133,7 +134,10 @@
   flex-direction: column;
   gap: 0;
   min-height: 40px;
+  min-width: 0;
+  flex: 1 1 0;
   justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .nameRow {
@@ -141,7 +145,7 @@
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: nowrap;
-  gap: 4px;
+  gap: 2px;
 }
 
 .authorName {
@@ -153,6 +157,7 @@
   line-height: 22px;
   letter-spacing: 0.16px;
   color: #1a1a1a;
+  text-align: left;
 }
 
 .timeWrap {
@@ -181,13 +186,16 @@
   letter-spacing: 0.12px;
   color: #6a6a6a;
   width: 59px;
+  text-align: left;
 }
 
 .rolePill {
   margin-top: 2px;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  align-self: flex-start;
+  max-width: 100%;
   padding: 2px 0;
   border-radius: 4px;
 }
@@ -200,6 +208,7 @@
   line-height: normal;
   letter-spacing: 0.12px;
   color: #6a6a6a;
+  text-align: left;
   white-space: nowrap;
 }
 
@@ -216,6 +225,7 @@
   line-height: 18px;
   letter-spacing: 0.14px;
   color: #1a1a1a;
+  text-align: left;
 }
 
 .videoWrap {
@@ -370,7 +380,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 4px 0;
+  padding: 2px 0;
   box-sizing: border-box;
 }
 
@@ -378,18 +388,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0;
+  gap: 12px;
 }
 
 .statPair {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 4px;
-}
-
-.statPairSecond {
-  margin-left: 63px;
+  gap: 2px;
 }
 
 .statIcon {
@@ -413,6 +419,7 @@
   line-height: 22px;
   letter-spacing: 0.24px;
   color: #6a6a6a;
+  text-align: left;
 }
 
 .moreIcon {
@@ -440,6 +447,7 @@
   line-height: 18px;
   letter-spacing: 0.14px;
   color: #1a1a1a;
+  text-align: left;
   white-space: pre-wrap;
 }
 
@@ -455,6 +463,7 @@
   line-height: normal;
   letter-spacing: 0.14px;
   color: #1a1a1a;
+  text-align: left;
   text-decoration: none;
   cursor: pointer;
 }
@@ -478,6 +487,7 @@
   font-size: 14px;
   line-height: 20px;
   color: #1a1a1a;
+  text-align: left;
 }
 
 .carouselStrip {
@@ -490,7 +500,7 @@
   overflow-y: hidden;
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 6px;
   scrollbar-width: none;
 }
 

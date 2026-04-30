@@ -82,11 +82,16 @@
 
 .iconBubble {
   display: flex;
-  align-items: flex-start;
-  padding: 8px;
-  border-radius: 100px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
   background: #edf2ff;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .rowIconImg {

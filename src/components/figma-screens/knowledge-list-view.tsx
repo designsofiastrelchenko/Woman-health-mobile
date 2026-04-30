@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { ChevronRightIcon } from "@/components/figma-screens/chevron-right-icon";
 import { ProfileFigmaStatusBar } from "@/components/figma-screens/profile-figma-status-bar";
 import { KnowledgeMaskedIcon } from "@/components/figma-screens/knowledge-masked-icon";
 import { NavigationBar } from "@/components/ui/navigation-bar";
@@ -10,56 +11,10 @@ const IMG = {
   users: "/icons/figma/2c61c5c280eeca9bb7fc9a4d25d15bd636f8b1f5.svg",
   note: "/icons/figma/913c03b054ed5a229445a6e4c2bcdaf737f66b98.svg",
   mic: "/icons/figma/8dba33902a512dac388032d720a48da0f2870061.svg",
-  arrow: "/icons/figma/dc4508dc1ca821633c49c816fbd159e45cff5484.svg",
-  checkO: "/icons/figma/547d9b794b099e2dbeecf7e5173d3239c4986570.svg",
-  checkI: "/icons/figma/f5a34a7506cb0b35939de148c59497d0ac76ab77.svg",
   search: "/icons/figma/27d9b915f2687d2a1080d9aba17ec095e811b79d.svg",
 } as const;
 
 const STATUS_RIGHT = "/icons/figma/fff8b42c3c4d1c153ff0ab5d627fa1b8b3a7f0fc.svg";
-
-function ArrowRight() {
-  return (
-    <div className={styles.arrow24} data-name="icon / arrow - right">
-      <div className={styles.arrowVec}>
-        <img alt="" src={IMG.arrow} draggable={false} />
-      </div>
-    </div>
-  );
-}
-
-function Check14() {
-  return (
-    <div className={styles.check14} data-name="icon / check">
-      <img
-        alt=""
-        src={IMG.checkO}
-        draggable={false}
-        style={{
-          position: "absolute",
-          inset: "8.33%",
-          width: "auto",
-          height: "auto",
-          maxWidth: "none",
-          transform: "scale(1.08)",
-        }}
-      />
-      <img
-        alt=""
-        src={IMG.checkI}
-        draggable={false}
-        style={{
-          position: "absolute",
-          top: "37.5%",
-          left: "33.33%",
-          right: "33.33%",
-          bottom: "37.5%",
-          maxWidth: "none",
-        }}
-      />
-    </div>
-  );
-}
 
 /** Figma 140:10057 — Knowledge. */
 export function KnowledgeListView() {
@@ -124,9 +79,8 @@ export function KnowledgeListView() {
                 <KnowledgeMaskedIcon
                   innerSrc={IMG.playFill}
                   size={24}
-                  maskPosition="-1.97px -2px"
+                  maskPosition="0 0"
                   maskLayerInset="8.33% 8.46% 8.33% 8.21%"
-                  innerImgInset="-3.75%"
                 />
               </div>
             </div>
@@ -146,7 +100,7 @@ export function KnowledgeListView() {
               </div>
             </div>
           </div>
-          <ArrowRight />
+          <ChevronRightIcon />
         </Link>
 
         <Link href="/knowledge/course" className={styles.row} data-node-id="151:3520">
@@ -156,9 +110,8 @@ export function KnowledgeListView() {
                 <KnowledgeMaskedIcon
                   innerSrc={IMG.playFill}
                   size={24}
-                  maskPosition="-1.97px -2px"
+                  maskPosition="0 0"
                   maskLayerInset="8.33% 8.46% 8.33% 8.21%"
-                  innerImgInset="-3.75%"
                 />
               </div>
             </div>
@@ -172,17 +125,13 @@ export function KnowledgeListView() {
                     Курс
                   </p>
                 </div>
-                <div className={styles.metaWithCheckWide} data-node-id="151:3600">
-                  <Check14 />
-                  <p className={styles.metaMuted} data-node-id="151:3602">
-                    {" "}
-                    Завершён
-                  </p>
-                </div>
+                <p className={styles.metaMuted} data-node-id="151:3602">
+                  Завершён
+                </p>
               </div>
             </div>
           </div>
-          <ArrowRight />
+          <ChevronRightIcon />
         </Link>
 
         <Link href="/knowledge/club" className={styles.row} data-node-id="151:3533">
@@ -207,16 +156,13 @@ export function KnowledgeListView() {
                     Клуб
                   </p>
                 </div>
-                <div className={styles.metaWithCheck} data-node-id="151:3609" style={{ gap: "2px" }}>
-                  <Check14 />
-                  <p className={styles.metaMuted} data-node-id="151:3611">
-                    Активен
-                  </p>
-                </div>
+                <p className={styles.metaMuted} data-node-id="151:3611">
+                  Активен
+                </p>
               </div>
             </div>
           </div>
-          <ArrowRight />
+          <ChevronRightIcon />
         </Link>
 
         <div className={styles.row} data-node-id="151:3552">
@@ -247,7 +193,7 @@ export function KnowledgeListView() {
               </div>
             </div>
           </div>
-          <ArrowRight />
+          <ChevronRightIcon />
         </div>
 
         <Link href="/knowledge/guide" className={styles.row} data-node-id="151:3567">
@@ -278,7 +224,7 @@ export function KnowledgeListView() {
               </div>
             </div>
           </div>
-          <ArrowRight />
+          <ChevronRightIcon />
         </Link>
 
         <Link href="/knowledge/webinar" className={styles.row} data-node-id="151:3639">
@@ -309,7 +255,7 @@ export function KnowledgeListView() {
               </div>
             </div>
           </div>
-          <ArrowRight />
+          <ChevronRightIcon />
         </Link>
       </div>
 

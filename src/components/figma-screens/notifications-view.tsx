@@ -84,26 +84,28 @@ export function NotificationsView() {
         </div>
 
         <div className={`${styles.row} ${styles.rowWide}`}>
-          <div className={`${styles.iconBubble} ${styles.iconBubbleViolet}`}>
-            <Image
-              src="/icons/figma/a74aaa100e2228ffd335e43128e7c756b5d5c5c9.svg"
-              alt=""
-              width={20}
-              height={20}
-              className={styles.iconImg}
-              unoptimized
-            />
-          </div>
-          <div className={styles.body}>
-            <div className={`${styles.textBlock} ${styles.descWide}`}>
-              <p className={styles.title}>Напоминание о цикле</p>
-              <p className={styles.desc}>
-                По вашему трекеру сегодня ожидаемое начало фолликулярной фазы
-              </p>
+          <div className={styles.rowMain}>
+            <div className={`${styles.iconBubble} ${styles.iconBubbleViolet}`}>
+              <Image
+                src="/icons/figma/a74aaa100e2228ffd335e43128e7c756b5d5c5c9.svg"
+                alt=""
+                width={20}
+                height={20}
+                className={styles.iconImg}
+                unoptimized
+              />
             </div>
-            <div className={styles.timeRow}>
-              <IconClock size={18} />
-              <p className={styles.timeText}>15:00</p>
+            <div className={styles.body}>
+              <div className={`${styles.textBlock} ${styles.descWide}`}>
+                <p className={styles.title}>Напоминание о цикле</p>
+                <p className={styles.desc}>
+                  По вашему трекеру сегодня ожидаемое начало фолликулярной фазы
+                </p>
+              </div>
+              <div className={styles.timeRow}>
+                <IconClock size={18} />
+                <p className={styles.timeText}>15:00</p>
+              </div>
             </div>
           </div>
         </div>
@@ -187,26 +189,28 @@ export function NotificationsView() {
         </div>
 
         <div className={`${styles.row} ${styles.rowWide}`}>
-          <div className={`${styles.iconBubble} ${styles.iconBubbleBlue}`}>
-            <Image
-              src="/icons/figma/8aa782b7482045c1d07d479c954585363fbf3c60.svg"
-              alt=""
-              width={20}
-              height={20}
-              className={styles.iconImg}
-              unoptimized
-            />
-          </div>
-          <div className={styles.body}>
-            <div className={`${styles.textBlock} ${styles.descWide}`}>
-              <p className={styles.title}>Консультация завершена</p>
-              <p className={styles.desc}>
-                Запись от 10 февраля: рекомендации доступны в разделе «Мои консультации»
-              </p>
+          <div className={styles.rowMain}>
+            <div className={`${styles.iconBubble} ${styles.iconBubbleBlue}`}>
+              <Image
+                src="/icons/figma/8aa782b7482045c1d07d479c954585363fbf3c60.svg"
+                alt=""
+                width={20}
+                height={20}
+                className={styles.iconImg}
+                unoptimized
+              />
             </div>
-            <div className={styles.timeRow}>
-              <IconClock size={18} />
-              <p className={styles.timeText}>19:00</p>
+            <div className={styles.body}>
+              <div className={`${styles.textBlock} ${styles.descWide}`}>
+                <p className={styles.title}>Консультация завершена</p>
+                <p className={styles.desc}>
+                  Запись от 10 февраля: рекомендации доступны в разделе «Мои консультации»
+                </p>
+              </div>
+              <div className={styles.timeRow}>
+                <IconClock size={18} />
+                <p className={styles.timeText}>19:00</p>
+              </div>
             </div>
           </div>
         </div>

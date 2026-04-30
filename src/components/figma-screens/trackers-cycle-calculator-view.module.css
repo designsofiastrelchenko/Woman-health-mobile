@@ -248,7 +248,8 @@
 
 .iconSq {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 4px;
   border-radius: 4px;
   flex-shrink: 0;

@@ -9,5 +9,30 @@
 
 .flip {
   display: flex;
+  align-items: center;
+  justify-content: center;
   transform: rotate(180deg) scaleY(-1);
+}
+
+/* Same ~6×12 glyph in 24×24 as chevron-right-icon (Figma icon / arrow - right). */
+.glyph {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.glyphInset {
+  position: absolute;
+  bottom: 25%;
+  left: 37.5%;
+  right: 37.5%;
+  top: 25%;
+}
+
+.glyphInset img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
 }

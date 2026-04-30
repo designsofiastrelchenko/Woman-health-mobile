@@ -170,7 +170,7 @@
 
 .bubbleOut {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -188,13 +188,15 @@
 
 .bubbleOutText {
   margin: 0;
+  max-width: 100%;
   font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
   font-weight: 400;
   font-size: 12px;
-  line-height: normal;
+  line-height: 1.35;
   letter-spacing: 0.12px;
   color: #fff;
   text-align: right;
+  word-wrap: break-word;
 }
 
 .bubbleOutMeta {
@@ -202,7 +204,7 @@
   font-family: var(--font-brand), var(--font-fallback), system-ui, sans-serif;
   font-weight: 400;
   font-size: 10px;
-  line-height: normal;
+  line-height: 1.35;
   letter-spacing: 0.2px;
   color: #fff;
   white-space: nowrap;
@@ -210,47 +212,51 @@
 
 .out1 {
   left: 188px;
-  top: 464px;
+  /* Below "Сегодня" divider; divider ends ~478px (456+22). */
+  top: 486px;
   width: 171px;
-  height: 50px;
 }
 
 .audioBubble {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   left: 197px;
-  top: 560px;
+  /* Was 560px — overlaps taller out1 (~486+78). */
+  top: 572px;
   width: 159px;
-  height: 73px;
   border: none;
   background: #4979fb;
   border-radius: 16px 16px 0 16px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   align-items: flex-end;
-  padding: 10px;
+  padding: 10px 10px 12px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .audioDoc {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
   padding: 8px;
   border-radius: 4px;
   background: #6d94fc;
   width: 139px;
+  max-width: 100%;
   box-sizing: border-box;
   align-self: flex-end;
+  overflow: hidden;
 }
 
 .audioPlayRow {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   gap: 4px;
+  flex-shrink: 0;
 }
 
 .play16 {
@@ -276,8 +282,9 @@
   flex-direction: row;
   align-items: flex-end;
   justify-content: flex-start;
-  gap: 4px;
-  width: 66px;
+  gap: 2px;
+  min-width: 0;
+  flex: 1 1 0;
   height: 21px;
 }
 
@@ -288,8 +295,13 @@
   flex-shrink: 0;
 }
 
+.audioBubble .bubbleOutMeta {
+  line-height: 1.35;
+}
+
 .b3 {
-  top: 645px;
+  /* Was 645px — room for taller out1 + audio block. */
+  top: 661px;
   height: 80px;
 }
 
@@ -309,7 +321,8 @@
 .divider {
   position: absolute;
   left: 16px;
-  top: 526px;
+  /* After b2 (bottom ~452px), before outgoing bubble — was 526px and overlapped out1. */
+  top: 456px;
   width: 343px;
   height: 22px;
   display: flex;
@@ -393,7 +406,7 @@
 }
 
 .av3 {
-  top: 685px;
+  top: 701px;
 }
 
 .composer {
@@ -457,23 +470,6 @@
   letter-spacing: 0.12px;
   color: #404040;
   white-space: nowrap;
-}
-
-.inputCaret {
-  width: 0;
-  height: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.inputCaret img {
-  display: block;
-  height: 22px;
-  width: auto;
-  max-width: none;
-  transform: rotate(90deg);
 }
 
 .sendWrap {

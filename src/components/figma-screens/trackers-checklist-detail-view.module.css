@@ -74,25 +74,27 @@
   border-radius: 16px;
 }
 
+/* Figma slider: 350×7 rounded track — CSS replaces stretched SVG (was 350×7 drawn into ~350×150). */
 .sliderWrap {
   position: relative;
   width: 100%;
-  height: 0;
+  height: 7px;
   flex-shrink: 0;
+  border-radius: 100px;
+  background: #edf2ff;
+  overflow: hidden;
 }
 
-.sliderWrap img {
-  display: block;
+.sliderFill {
   position: absolute;
-  left: -1.02%;
-  right: -1.02%;
-  top: -3.5px;
-  bottom: -3.5px;
-  width: calc(100% + 2.04%);
-  height: auto;
-  min-height: 11px;
-  max-width: none;
-  object-fit: fill;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  border-radius: 100px;
+  background: #4979fb;
+  min-width: 7px;
+  box-sizing: border-box;
 }
 
 .progressCaption {

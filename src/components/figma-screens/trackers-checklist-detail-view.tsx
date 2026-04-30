@@ -1,12 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { IconArrowBack } from "@/components/figma-screens/icon-arrow-back";
 import { ProfileFigmaStatusBar } from "@/components/figma-screens/profile-figma-status-bar";
 import styles from "./trackers-checklist-detail-view.module.css";
 
 const STATUS_RIGHT = "/icons/figma/7583d06de40229752e21156f8a542c09e9ffb2ce.svg";
-const SLIDER_PROCESS = "/icons/figma/0237eb2bb619d4f05ecf0ded3926631b2508c596.svg";
-const SLIDER_DONE = "/icons/figma/f6a337eaf9b1b152a4cf02cdcf743f18b618e1a2.svg";
 
 export type ChecklistDetailVariant = "process" | "done";
 
@@ -36,8 +33,16 @@ export function TrackersChecklistDetailView({ variant }: TrackersChecklistDetail
       </p>
 
       <div className={styles.progressBlock} data-node-id={isDone ? "170:15126" : "170:14979"}>
-        <div className={styles.sliderWrap} data-node-id={isDone ? "170:15127" : "170:14981"}>
-          <img alt="" src={isDone ? SLIDER_DONE : SLIDER_PROCESS} draggable={false} />
+        <div
+          className={styles.sliderWrap}
+          data-node-id={isDone ? "170:15127" : "170:14981"}
+          role="progressbar"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={isDone ? 100 : 17}
+          aria-label={isDone ? "Прогресс: 100%" : "Прогресс: 17%"}
+        >
+          <div className={styles.sliderFill} style={{ width: isDone ? "100%" : "17%" }} />
         </div>
         <p className={styles.progressCaption} data-node-id={isDone ? "170:15131" : "170:14985"}>
           {isDone ? "100% выполнено" : "17% выполнено"}

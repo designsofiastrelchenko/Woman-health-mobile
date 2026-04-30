@@ -312,7 +312,8 @@
   top: 50%;
   transform: translateY(-50%);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 4px;
   border-radius: 100px;
   background: #32d583;
@@ -324,17 +325,22 @@
   top: 50%;
   transform: translateY(-50%);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 4px;
   border-radius: 100px;
   background: #d4dbea;
 }
 
 .goGreen img,
-.goGray img {
+.goGray img,
+.expandArrowBubble img {
   display: block;
   width: 18px;
   height: 18px;
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
 }
 
 .expandArrowOuter {
@@ -351,11 +357,13 @@
 
 .expandArrowRot {
   transform: rotate(90deg);
+  transform-origin: 50% 50%;
 }
 
 .expandArrowBubble {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 4px;
   border-radius: 100px;
   background: #d4dbea;
@@ -382,10 +390,12 @@
 
 .lessonIcon {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 4px;
   border-radius: 100px;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .lessonIconGreen {

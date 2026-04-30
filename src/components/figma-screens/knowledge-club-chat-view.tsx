@@ -7,7 +7,6 @@ import styles from "./knowledge-club-chat-view.module.css";
 const IMG = {
   statusRight: "/icons/figma/7583d06de40229752e21156f8a542c09e9ffb2ce.svg",
   plus: "/icons/figma/8ff53fa8cd1a5a478aa778808a2473e739e2fa82.svg",
-  lineCaret: "/icons/figma/df4dd903635aeafa6856d789d7c5fad5a118a118.svg",
   sendFill: "/icons/figma/17074aefeb1eb263e9f45c1e2d2aba2e469c527f.svg",
   playMask: "/icons/figma/329d600c34e04aaae00fe7283e2d7bae1ccd2630.svg",
   playFill: "/icons/figma/37f7008b1caf79e51649319b08a8cf70fc750aac.svg",
@@ -80,6 +79,18 @@ export function KnowledgeClubChatView() {
         <img alt="" src={IMG.avatar2} draggable={false} />
       </div>
 
+      <div className={styles.divider} data-node-id="146:14517">
+        <div className={styles.dividerLine} data-node-id="146:14518">
+          <img alt="" src={IMG.lineDivider} draggable={false} />
+        </div>
+        <p className={styles.dividerText} data-node-id="146:14519">
+          Сегодня
+        </p>
+        <div className={styles.dividerLine} data-node-id="146:14520">
+          <img alt="" src={IMG.lineDivider} draggable={false} />
+        </div>
+      </div>
+
       <div className={`${styles.bubbleOut} ${styles.bubbleOutPlain} ${styles.out1}`} data-node-id="147:2410">
         <p className={styles.bubbleOutText} data-node-id="147:2411">
           Я уже в пути, девчонки
@@ -116,18 +127,6 @@ export function KnowledgeClubChatView() {
         </p>
       </div>
 
-      <div className={styles.divider} data-node-id="146:14517">
-        <div className={styles.dividerLine} data-node-id="146:14518">
-          <img alt="" src={IMG.lineDivider} draggable={false} />
-        </div>
-        <p className={styles.dividerText} data-node-id="146:14519">
-          Сегодня
-        </p>
-        <div className={styles.dividerLine} data-node-id="146:14520">
-          <img alt="" src={IMG.lineDivider} draggable={false} />
-        </div>
-      </div>
-
       <div className={`${styles.bubbleLeft} ${styles.b3}`} data-node-id="147:2417">
         <p className={styles.bubbleAuthor} data-node-id="147:2420">
           Юлия Годунова
@@ -153,9 +152,6 @@ export function KnowledgeClubChatView() {
             <p className={styles.inputPlaceholder} data-node-id="148:2668">
               Ты точно пра
             </p>
-            <span className={styles.inputCaret} data-node-id="148:2669">
-              <img alt="" src={IMG.lineCaret} draggable={false} />
-            </span>
           </div>
         </div>
         <div className={styles.sendWrap} data-node-id="146:14454">

@@ -123,7 +123,7 @@ export function NewsFeedView() {
                 1.6к
               </p>
             </div>
-            <div className={`${styles.statPair} ${styles.statPairSecond}`} data-node-id="142:13098">
+            <div className={styles.statPair} data-node-id="142:13098">
               <div className={styles.statIcon} data-node-id="142:13099">
                 <img src={IMG.chat} alt="" draggable={false} />
               </div>
@@ -157,7 +157,7 @@ export function NewsFeedView() {
                 1.8к
               </p>
             </div>
-            <div className={`${styles.statPair} ${styles.statPairSecond}`} data-node-id="142:13203">
+            <div className={styles.statPair} data-node-id="142:13203">
               <div className={styles.statIcon} data-node-id="142:13204">
                 <img src={IMG.chat} alt="" draggable={false} />
               </div>
@@ -205,7 +205,7 @@ export function NewsFeedView() {
                 1.6 k
               </p>
             </div>
-            <div className={`${styles.statPair} ${styles.statPairSecond}`} data-node-id="142:13255">
+            <div className={styles.statPair} data-node-id="142:13255">
               <div className={styles.statIcon} data-node-id="142:13256">
                 <img src={IMG.chat} alt="" draggable={false} />
               </div>

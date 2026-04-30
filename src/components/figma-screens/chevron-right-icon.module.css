@@ -1,0 +1,25 @@
+/**
+ * Figma `icon / arrow - right` — same geometry as Knowledge list (140:10057):
+ * 24×24 hit area, vector inset bottom/top 25%, left/right 37.5% → ~6×12 glyph.
+ */
+.wrap {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.vec {
+  position: absolute;
+  bottom: 25%;
+  left: 37.5%;
+  right: 37.5%;
+  top: 25%;
+}
+
+.vec img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}

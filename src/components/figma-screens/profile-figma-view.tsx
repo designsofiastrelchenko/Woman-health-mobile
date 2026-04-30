@@ -2,6 +2,7 @@
 import Link from "next/link";
 import typography from "@/design-system/typography.module.css";
 import { NavigationBar } from "@/components/ui/navigation-bar";
+import { ChevronRightIcon } from "@/components/figma-screens/chevron-right-icon";
 import { IconArrowBack } from "@/components/figma-screens/icon-arrow-back";
 import { ProfileFigmaStatusBar } from "@/components/figma-screens/profile-figma-status-bar";
 import styles from "./profile-figma-view.module.css";
@@ -26,7 +27,6 @@ const IMG = {
   lifeFill: "/icons/figma/bdcbd0542c5f15e9605d31611eef5f7dc3395fba.svg",
   secFill: "/icons/figma/9c478a967434017e616cfe5e49109ab1a83e18b2.svg",
   switch: "/icons/figma/6e0668302826376eb979c788a76a507bf5836fce.svg",
-  chevron: "/icons/figma/dc4508dc1ca821633c49c816fbd159e45cff5484.svg",
   logout1: "/icons/figma/13700e99ea5921f5dbddbcad49fd9ca6e3e38f34.svg",
   logout2: "/icons/figma/e8644324b12ca9a1f47c3366da4513bcd05876b3.svg",
   bagFill: "/icons/figma/5a099156576720eaad3e2dfafb22976bcfc8e5ae.svg",
@@ -34,14 +34,28 @@ const IMG = {
   padlockFill: "/icons/figma/2c50df8dcb67dc608a3be61f2d45bd7c3f6adabc.svg",
 } as const;
 
+/** Symmetrize 4-part % inset (top/right/bottom/left) so layered Figma slices center in 24×24. */
+function symInset(inset: string): string {
+  const parts = inset.trim().split(/\s+/).filter(Boolean);
+  if (parts.length !== 4) {
+    return inset;
+  }
+  const nums = parts.map((p) => parseFloat(p.replace(/%$/, "")));
+  if (nums.length !== 4 || nums.some((x) => Number.isNaN(x))) {
+    return inset;
+  }
+  const [t, r, b, l] = nums;
+  return `${(t + b) / 2}% ${(r + l) / 2}%`;
+}
+
 function IconUserSquare() {
   return (
     <div className={styles.icon24}>
-      <span className={`${styles.vecAbs} ${styles.vecImg}`} style={{ inset: "10.42%" }}>
-        <img alt="" src={IMG.user1} className={styles.vecImg} style={{ inset: "-3.95%", position: "absolute" }} />
+      <span className={styles.vecAbs} style={{ inset: "10.42%" }}>
+        <img alt="" src={IMG.user1} className={styles.vecImg} />
       </span>
-      <span className={`${styles.vecAbs}`} style={{ inset: "29.17% 31.25%" }}>
-        <img alt="" src={IMG.user2} className={styles.vecImg} style={{ inset: "-7.5% -8.33%", position: "absolute" }} />
+      <span className={styles.vecAbs} style={{ inset: "29.17% 31.25%" }}>
+        <img alt="" src={IMG.user2} className={styles.vecImg} />
       </span>
     </div>
   );
@@ -50,22 +64,13 @@ function IconUserSquare() {
 function IconNotificationOff() {
   return (
     <div className={styles.icon24}>
-      <span className={`${styles.vecAbs}`} style={{ inset: "8.33% 10.42% 20.83% 10.42%" }}>
-        <img alt="" src={IMG.notif1} className={styles.vecImg} style={{ inset: "-4.41% -3.95%", position: "absolute" }} />
+      {/* Figma uses asymmetric vertical insets; symInset misaligns bell vs clapper. */}
+      <span className={styles.vecAbs} style={{ inset: "8.33% 10.42% 20.83% 10.42%" }}>
+        <img alt="" src={IMG.notif1} className={styles.vecImg} />
       </span>
-      <span className={`${styles.vecAbs}`} style={{ inset: "79.17% 33.33% 8.33% 33.33%" }}>
-        <img alt="" src={IMG.notif2} className={styles.vecImg} style={{ inset: "-25.01% -9.38%", position: "absolute" }} />
+      <span className={styles.vecAbs} style={{ inset: "79.17% 33.33% 8.33% 33.33%" }}>
+        <img alt="" src={IMG.notif2} className={styles.vecImg} />
       </span>
-    </div>
-  );
-}
-
-function IconChevronRight() {
-  return (
-    <div className={styles.chevron}>
-      <div className={styles.chevronInner}>
-        <img alt="" src={IMG.chevron} style={{ display: "block", width: "100%", height: "100%" }} />
-      </div>
     </div>
   );
 }
@@ -73,11 +78,21 @@ function IconChevronRight() {
 function IconLogout() {
   return (
     <div className={styles.icon24}>
-      <span className={`${styles.vecAbs}`} style={{ inset: "22.92% 12.5% 8.33% 12.5%" }}>
-        <img alt="" src={IMG.logout1} className={styles.vecImg} style={{ inset: "-4.55% -4.17%", position: "absolute" }} />
+      {/* Arc + stem are positioned asymmetrically in Figma; do not symInset or the stem misses the gap. */}
+      <span className={styles.vecAbs} style={{ inset: "22.92% 12.5% 8.33% 12.5%" }}>
+        <img alt="" src={IMG.logout1} className={styles.vecImg} />
       </span>
-      <span className={`${styles.vecAbs}`} style={{ bottom: "58.33%", left: "50%", right: "50%", top: "8.33%" }}>
-        <img alt="" src={IMG.logout2} className={styles.vecImg} style={{ inset: "-9.38% -0.75px", position: "absolute" }} />
+      <span
+        className={styles.vecAbs}
+        style={{
+          top: "8.33%",
+          bottom: "58.33%",
+          left: "50%",
+          width: "14.58%",
+          transform: "translateX(-50%)",
+        }}
+      >
+        <img alt="" src={IMG.logout2} className={styles.vecImg} />
       </span>
     </div>
   );
@@ -132,13 +147,13 @@ export function ProfileFigmaView({ layout = "default" }: ProfileFigmaViewProps) 
         <div className={styles.editBadge} data-name="icon">
           <div className={styles.editBadgeInner} data-name="icon / pencil">
             <span className={styles.vecAbs} style={{ inset: "8.33%" }}>
-              <img alt="" src={IMG.pencil1} className={styles.vecImg} style={{ position: "absolute", inset: "-5.62% -5.63% -5.63% -5.62%" }} />
+              <img alt="" src={IMG.pencil1} className={styles.vecImg} />
             </span>
-            <span className={styles.vecAbs} style={{ inset: "16.67% 16.67% 54.17% 54.17%" }}>
-              <img alt="" src={IMG.pencil2} className={styles.vecImg} style={{ position: "absolute", inset: "-11.36%" }} />
+            <span className={styles.vecAbs} style={{ inset: symInset("16.67% 16.67% 54.17% 54.17%") }}>
+              <img alt="" src={IMG.pencil2} className={styles.vecImg} />
             </span>
-            <span className={styles.vecAbs} style={{ inset: "91.67% 8.33% 8.33% 58.33%" }}>
-              <img alt="" src={IMG.pencil3} className={styles.vecImg} style={{ position: "absolute", inset: "-0.75px -14.06%" }} />
+            <span className={styles.vecAbs} style={{ inset: symInset("91.67% 8.33% 8.33% 58.33%") }}>
+              <img alt="" src={IMG.pencil3} className={styles.vecImg} />
             </span>
           </div>
         </div>
@@ -185,7 +200,7 @@ export function ProfileFigmaView({ layout = "default" }: ProfileFigmaViewProps) 
           <div className={`${styles.pillIconBg} ${styles.pillIconBgFire}`}>
             <div className={styles.pillIcon16}>
               <span className={styles.vecAbs} style={{ inset: "12.5% 20.83%" }}>
-                <img alt="" src={IMG.fire} className={styles.vecImg} style={{ position: "absolute", inset: "-5.7% -8.04% -6.25% -8.04%" }} />
+                <img alt="" src={IMG.fire} className={styles.vecImg} />
               </span>
             </div>
           </div>
@@ -202,7 +217,7 @@ export function ProfileFigmaView({ layout = "default" }: ProfileFigmaViewProps) 
           <div className={`${styles.pillIconBg} ${styles.pillIconBgCheck}`}>
             <div className={styles.pillIcon16}>
               <span className={styles.checkInset}>
-                <img alt="" src={IMG.check} className={styles.vecImg} style={{ position: "absolute", inset: 0 }} />
+                <img alt="" src={IMG.check} className={styles.vecImg} />
               </span>
             </div>
           </div>
@@ -229,7 +244,7 @@ export function ProfileFigmaView({ layout = "default" }: ProfileFigmaViewProps) 
                 Личные данные
               </p>
             </div>
-            <IconChevronRight />
+            <ChevronRightIcon />
           </Link>
           {isDeleteChrome ? (
             <>
@@ -240,7 +255,7 @@ export function ProfileFigmaView({ layout = "default" }: ProfileFigmaViewProps) 
                     Мои покупки / доступы
                   </p>
                 </div>
-                <IconChevronRight />
+                <ChevronRightIcon />
               </Link>
               <Link href="/profile/my-purchases/subscription" className={styles.rowLink} data-name="Delete Account">
                 <div className={styles.rowLeft}>
@@ -249,7 +264,7 @@ export function ProfileFigmaView({ layout = "default" }: ProfileFigmaViewProps) 
                     Подписка
                   </p>
                 </div>
-                <IconChevronRight />
+                <ChevronRightIcon />
               </Link>
             </>
           ) : (
@@ -260,7 +275,7 @@ export function ProfileFigmaView({ layout = "default" }: ProfileFigmaViewProps) 
                   Мои покупки
                 </p>
               </div>
-              <IconChevronRight />
+              <ChevronRightIcon />
             </Link>
           )}
         </div>
@@ -304,7 +319,7 @@ export function ProfileFigmaView({ layout = "default" }: ProfileFigmaViewProps) 
                 Язык
               </p>
             </div>
-            <IconChevronRight />
+            <ChevronRightIcon />
           </Link>
           {isDeleteChrome ? (
             <div className={`${styles.row} ${styles.rowTight}`} data-name="Help">
@@ -332,7 +347,7 @@ export function ProfileFigmaView({ layout = "default" }: ProfileFigmaViewProps) 
                 FAQ
               </p>
             </div>
-            <IconChevronRight />
+            <ChevronRightIcon />
           </Link>
           <Link href="/profile/help" className={styles.rowLink} data-name="Help">
             <div className={styles.rowLeft}>
@@ -341,7 +356,7 @@ export function ProfileFigmaView({ layout = "default" }: ProfileFigmaViewProps) 
                 Форма обращения
               </p>
             </div>
-            <IconChevronRight />
+            <ChevronRightIcon />
           </Link>
         </div>
       </section>
@@ -369,7 +384,7 @@ export function ProfileFigmaView({ layout = "default" }: ProfileFigmaViewProps) 
                 Защита данных
               </p>
             </div>
-            <IconChevronRight />
+            <ChevronRightIcon />
           </div>
           {isDeleteChrome ? (
             <div className={styles.row} data-name="Personal Data">
@@ -379,7 +394,7 @@ export function ProfileFigmaView({ layout = "default" }: ProfileFigmaViewProps) 
                   Пароль, сессии
                 </p>
               </div>
-              <IconChevronRight />
+              <ChevronRightIcon />
             </div>
           ) : null}
         </div>
@@ -393,7 +408,7 @@ export function ProfileFigmaView({ layout = "default" }: ProfileFigmaViewProps) 
               Выйти
             </p>
           </div>
-          <IconChevronRight />
+          <ChevronRightIcon />
         </Link>
       </div>
 

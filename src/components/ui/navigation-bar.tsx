@@ -85,27 +85,12 @@ function IconTask({ active = false }: { active?: boolean }) {
 }
 
 function IconHome({ active }: { active: boolean }) {
-  const roof = active
-    ? "/icons/figma/7c098738b77f07937d6cb3e2f9f9c551e63700f3.svg"
-    : "/icons/figma/f28eddd6a14607d70851a8f7632f58dccc287415.svg";
-  const door = active
-    ? "/icons/figma/fb5c121bab88973a752e471bdd070622566499ee.svg"
-    : "/icons/figma/1d2a15f3aef35409bbfbfacee7e233cf33183d15.svg";
+  const src = active
+    ? "/icons/figma/home-fill-1.svg"
+    : "/icons/figma/home-outline-2.svg";
   return (
     <span className={styles.icon22}>
-      <NavLayerImg src={roof} inset="8.33%" />
-      <span
-        className={styles.layer}
-        style={{
-          top: "62.5%",
-          bottom: "25%",
-          left: "50%",
-          width: "6px",
-          transform: "translateX(-50%)",
-        }}
-      >
-        <img src={door} alt="" className={styles.layerImg} draggable={false} />
-      </span>
+      <img src={src} alt="" className={styles.iconSingle} draggable={false} />
     </span>
   );
 }
@@ -126,10 +111,23 @@ function IconAnalytics({ active = false }: { active?: boolean }) {
           src="/icons/figma/e1dae882d428553590def20a485e80243690036f.svg"
           inset="68.75% 68.75% 25% 31.25%"
         />
-        <NavLayerImg
-          src="/icons/figma/d39dee5bb6f8702ebd96195614d906772b986144.svg"
-          inset="62.5% 50% 25% 50%"
-        />
+        <span
+          className={styles.layer}
+          style={{
+            top: "62.5%",
+            bottom: "25%",
+            left: "50%",
+            width: "18%",
+            transform: "translateX(-50%)",
+          }}
+        >
+          <img
+            src="/icons/figma/d39dee5bb6f8702ebd96195614d906772b986144.svg"
+            alt=""
+            className={styles.layerImg}
+            draggable={false}
+          />
+        </span>
         <NavLayerImg
           src="/icons/figma/fc73a7a753658de62e2b924b5dec88711cc10fd4.svg"
           inset="54.17% 29.17% 25% 70.83%"
@@ -186,19 +184,7 @@ function TabIcon({ id, active }: { id: NavigationTabId; active: boolean }) {
  * Bottom navigation — Figma `Navigation Bar` (node 130:7525), Light / Home vs Default.
  */
 export function NavigationBar({ active, className }: NavigationBarProps) {
-  const rootClass = [
-    styles.bar,
-    active === "home" ||
-    active === "profile" ||
-    active === "feed" ||
-    active === "knowledge" ||
-    active === "trackers"
-      ? styles.barHome
-      : "",
-    className,
-  ]
-    .filter(Boolean)
-    .join(" ");
+  const rootClass = [styles.bar, className].filter(Boolean).join(" ");
 
   return (
     <nav className={rootClass} aria-label="Основная навигация">
@@ -213,7 +199,7 @@ export function NavigationBar({ active, className }: NavigationBarProps) {
           >
             <TabIcon id={tab.id} active={isActive} />
             <span
-              className={`${typography.navLabel} ${isActive ? typography.navLabelActive : ""}`}
+              className={`${styles.itemLabel} ${typography.navLabel} ${isActive ? typography.navLabelActive : ""}`}
             >
               {tab.label}
             </span>
